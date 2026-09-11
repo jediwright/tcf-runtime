@@ -24,7 +24,7 @@
         "shapeVersions": {
           "tcf:P1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
         },
-        "propagationSeconds": 1.6207999999989786e-05
+        "propagationSeconds": 1.4542000000006272e-05
       },
       "specRef": "\u00a73.2"
     },
@@ -167,7 +167,7 @@
         "shapeVersions": {
           "tcf:P1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
         },
-        "propagationSeconds": 1.566699999999699e-05
+        "propagationSeconds": 1.4124999999975962e-05
       },
       "specRef": "\u00a75.2 step 3, \u00a73.3"
     },
@@ -190,7 +190,7 @@
         "shapeVersions": {
           "tcf:P1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
         },
-        "propagationSeconds": 1.5209000000016015e-05
+        "propagationSeconds": 1.5333000000006258e-05
       },
       "specRef": "\u00a75.2 step 3"
     },
@@ -237,7 +237,7 @@
         "shapeVersions": {
           "tcf:P7": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
         },
-        "propagationSeconds": 1.6375000000012907e-05
+        "propagationSeconds": 1.5708000000003164e-05
       },
       "specRef": "\u00a75.2 step 4"
     },
@@ -303,7 +303,7 @@
         "shapeVersions": {
           "tcf:C1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
         },
-        "propagationSeconds": 0.040488707999999984
+        "propagationSeconds": 0.0408945
       },
       "specRef": "\u00a77.1; PC#9 tcfComputedStatusWitness"
     },
@@ -346,7 +346,7 @@
         "shapeVersions": {
           "tcf:P8": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
         },
-        "propagationSeconds": 0.02218808299999997
+        "propagationSeconds": 0.022433166999999976
       },
       "specRef": "\u00a75.2 step 6, \u00a73.4"
     },
@@ -376,10 +376,39 @@
         "shapeVersions": {
           "tcf:C2": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
         },
-        "propagationSeconds": 0.021869874999999928,
+        "propagationSeconds": 0.022398625000000005,
         "computedStatus tcf:C2": "None"
       },
       "specRef": "\u00a77.3 silence"
+    },
+    {
+      "id": "F-10b",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Accept",
+          "Accept"
+        ],
+        [
+          "computedStatus tcf:Z2 absent",
+          true,
+          true
+        ]
+      ],
+      "got": {
+        "outcome": "Accept",
+        "computedStatus": {},
+        "computedRegister": {},
+        "stale": [],
+        "shapeVersions": {
+          "tcf:Z2": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+        },
+        "propagationSeconds": 0.021401833999999953,
+        "computedStatus tcf:Z2": "None"
+      },
+      "specRef": "\u00a77.3 silence, two levels (runtime v0.2 CP-1.1)"
     },
     {
       "id": "F-11",
@@ -426,7 +455,7 @@
         "shapeVersions": {
           "tcf:P12": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
         },
-        "propagationSeconds": 1.5083000000082336e-05
+        "propagationSeconds": 1.51669999999271e-05
       },
       "specRef": "\u00a75.2 step 7, \u00a73.1"
     },
@@ -463,10 +492,10 @@
         },
         "stale": [],
         "shapeVersions": {
-          "tcf:C3": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11",
-          "tcf:Z1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+          "tcf:Z1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11",
+          "tcf:C3": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
         },
-        "propagationSeconds": 0.05298654199999997
+        "propagationSeconds": 0.04442670900000001
       },
       "specRef": "\u00a77.1, \u00a77.3 tier ordering"
     },
@@ -503,7 +532,7 @@
         "shapeVersions": {
           "tcf:C4": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
         },
-        "propagationSeconds": 0.02050695799999991
+        "propagationSeconds": 0.02177266599999994
       },
       "specRef": "\u00a77.4, KL-4"
     },
@@ -535,7 +564,7 @@
         "shapeVersions": {
           "tcf:C1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
         },
-        "propagationSeconds": 0.02146283400000004
+        "propagationSeconds": 0.022071624999999928
       },
       "specRef": "\u00a75.2 step 1, \u00a75.3 last bullet"
     },
@@ -572,7 +601,7 @@
         "shapeVersions": {
           "tcf:C1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
         },
-        "propagationSeconds": 0.02117150000000001,
+        "propagationSeconds": 0.022067084000000126,
         "evidenceDecay": null,
         "evidenceDecay2": "2026-12-31"
       },

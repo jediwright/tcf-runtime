@@ -72,6 +72,12 @@ FIX = [
       prior=[{"id": "tcf:P11", "type": "Particle", "claimType": "claim", "authoritySource": AGENT}, P8],
       writeSet=[C("C2", ["P11", "P8"], "inferred")],
       expected=dict(outcome="Accept", computedStatusAbsent=["tcf:C2"])),
+ dict(id="F-10b", specRef="§7.3 silence, two levels (runtime v0.2 CP-1.1)", supplementary=True,
+      prior=[{"id": "tcf:P11", "type": "Particle", "claimType": "claim", "authoritySource": AGENT}, P8,
+             C("C2", ["P11", "P8"], "inferred"),                       # silenced one tier down (F-10 state); declared, no computedStatus
+             C("C3", ["P8"], "confirmed", computedStatus="confirmed")],
+      writeSet=[C("Z2", ["C2", "C3"], "inferred", tier="Zone")],
+      expected=dict(outcome="Accept", computedStatusAbsent=["tcf:Z2"])),
  dict(id="F-11", specRef="§5.2 step 7, §3.1", prior=[],
       writeSet=[P("P12", "unverified", body="the substrate handles this")],
       expected=dict(outcome="Accept", reportEntry={"tcf:P12": {"constraintClass": "terminology", "severity": "sh:Violation"}},

@@ -11,7 +11,7 @@ from .graphs import COMPOSITE_TIERS, TIER_CLASS, TIER_ORDER
 
 def construct_query(tier_class):
     """Spec §7.3 with (i) VALUES tables generated from STATUS_RANK, (ii) tier targeting,
-    (iii) the BF-6 silence guard (D-6b). Queued to runtime v0.2."""
+    (iii) the BF-6 silence guard (D-6b), per runtime v0.2 §7.3 (CP-1.1 correction)."""
     return f"""
 PREFIX tcf: <{TCF_BASE}>
 CONSTRUCT {{ ?n tcf:computedStatus ?weakest }}
@@ -27,7 +27,7 @@ WHERE {{
       # compatible with every VALUES row and inserts rank 0. Drop the composite instead.
       FILTER( BOUND(?status) )
       FILTER NOT EXISTS {{ ?n tcf:members ?x .
-          FILTER NOT EXISTS {{ ?x tcf:epistemicStatus ?a }}
+          FILTER NOT EXISTS {{ ?x a tcf:Particle ; tcf:epistemicStatus ?a }}   # CP-1.1: Particle-declared only (§7.1)
           FILTER NOT EXISTS {{ ?x tcf:computedStatus ?b }} }}
       {values_table("?status", "?rank")}
     }} GROUP BY ?n

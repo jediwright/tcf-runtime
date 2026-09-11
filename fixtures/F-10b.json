@@ -1,0 +1,63 @@
+{
+  "id": "F-10b",
+  "specRef": "§7.3 silence, two levels (runtime v0.2 CP-1.1)",
+  "supplementary": true,
+  "prior": [
+    {
+      "id": "tcf:P11",
+      "type": "Particle",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright"
+    },
+    {
+      "id": "tcf:P8",
+      "type": "Particle",
+      "epistemicStatus": "confirmed",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright",
+      "verificationRecord": {
+        "verificationMethod": "primary-source-read",
+        "verifiedBy": "urn:agent:jwright",
+        "verifiedAt": "2026-09-11T10:00:00Z",
+        "recencyWindowEnd": "2027-09-11T10:00:00Z",
+        "verificationEvidenceRef": "urn:evidence:ppg-1"
+      },
+      "register": "plain"
+    },
+    {
+      "id": "tcf:C2",
+      "type": "Cluster",
+      "members": [
+        "tcf:P11",
+        "tcf:P8"
+      ],
+      "epistemicStatus": "inferred"
+    },
+    {
+      "id": "tcf:C3",
+      "type": "Cluster",
+      "members": [
+        "tcf:P8"
+      ],
+      "epistemicStatus": "confirmed",
+      "computedStatus": "confirmed"
+    }
+  ],
+  "writeSet": [
+    {
+      "id": "tcf:Z2",
+      "type": "Zone",
+      "members": [
+        "tcf:C2",
+        "tcf:C3"
+      ],
+      "epistemicStatus": "inferred"
+    }
+  ],
+  "expected": {
+    "outcome": "Accept",
+    "computedStatusAbsent": [
+      "tcf:Z2"
+    ]
+  }
+}

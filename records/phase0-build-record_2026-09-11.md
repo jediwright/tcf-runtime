@@ -142,3 +142,5 @@ No fixture produced a gate outcome that would differ between the rank reading (`
 *⚑ SINGLE-CONTEXT — NOT PANELED. Engine pin ✓ (real run). Ledger tail unverified. D-5, D-6a, D-6b ruled. Delivery-not-application enforced.*
 
 *Session Harness v0.2 · Lightweight Mode · CONTEXTUAL · UX Minds, LLC · J. Wright · September 11, 2026*
+
+**Post-commit note (2026-09-11):** the B-7 delivery zip shipped a `README.md` and `.gitignore` without checking for existing files; both were overwritten on unzip and restored from git with the new content appended (insertions only, nothing lost). Build error, fixed, not carried — recorded because delivery-not-application means the operator's files are the operator's.

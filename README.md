@@ -12,7 +12,7 @@ The TCF defines how content is structured, labeled, and governed across seven ti
 - **Propagation** — computes composite-tier status from members; never declared by an author
 - **Fixtures** — the test cases that define what "working" means at each phase
 
-Governing document: [`spec/tcf-runtime-spec-v0-1_2026-08-24.md`](spec/tcf-runtime-spec-v0-1_2026-08-24.md). Current build plan: [`spec/tcf-runtime-phase0-build-plan-v0-1-2_2026-09-10.md`](spec/tcf-runtime-phase0-build-plan-v0-1-2_2026-09-10.md).
+Governing document: [`spec/tcf-runtime-spec-v0-2_2026-09-11.md`](spec/tcf-runtime-spec-v0-2_2026-09-11.md) (supersedes v0.1; v0.1 retained as the governed record the Phase 0 build implemented). Current build plan: [`spec/tcf-runtime-phase0-build-plan-v0-1-2_2026-09-10.md`](spec/tcf-runtime-phase0-build-plan-v0-1-2_2026-09-10.md).
 
 ## What this is not
 
@@ -39,9 +39,9 @@ Vocabulary namespace: `https://jediwright.github.io/tcf-runtime/vocab/tcf#`. Lib
 
 ## Status
 
-**Phase 0 — not started.** Scope: the write-time gate on fixtures, engine pinned, every refusal path reached by a real run. Exit criteria are in the build plan §8. Nothing here stops a real publish yet.
+**Phase 0 (complete — see State).** Scope: the write-time gate on fixtures, engine pinned, every refusal path reached by a real run. Exit criteria are in the build plan §8. Nothing here stops a real publish yet.
 
-All `tcf:` field names are TCF v1.7 *candidates* pending a v1.8 ruling. Every claim in `spec/` is single-context and unpaneled until stated otherwise.
+All `tcf:` field names are TCF v1.7 *candidates* pending a v1.8 ruling. Runtime spec v0.2 was issued under a three-iteration siloed Counter-Pass (converged with narrowing); v0.1 and the build plan remain single-context and unpaneled.
 
 ## Lineage
 
@@ -54,6 +54,8 @@ MIT — Jedi Wright, Systems of Thought, UX Minds, LLC. AI-collaborative draftin
 ## State
 
 **Phase 0 complete (2026-09-11).** A working write-time gate on fixtures with the engine pinned (pyshacl 0.40.1 / rdflib 7.6.0). See [`records/phase0-build-record_2026-09-11.md`](records/phase0-build-record_2026-09-11.md) for what "functional" means, what it does not, and the findings table feeding runtime v0.2 and TCF v1.8.
+
+**Runtime spec v0.2 issued (2026-09-11).** Corrects v0.1 where the Phase 0 build showed the text did not execute as written (BF-1, BF-2, BF-5, BF-6), absorbs the namespace and companion-v0.1.1 deltas, and records one build defect found under the Counter-Pass and fixed at `fa7fded` (§7.3 silence guard; fixture F-10b). Validation event passed. Phase 1 queue and TCF v1.8 inputs are in the spec's §12.
 
 ## Run
 

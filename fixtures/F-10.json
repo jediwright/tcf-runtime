@@ -1,0 +1,44 @@
+{
+  "id": "F-10",
+  "specRef": "§7.3 silence",
+  "prior": [
+    {
+      "id": "tcf:P11",
+      "type": "Particle",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright"
+    },
+    {
+      "id": "tcf:P8",
+      "type": "Particle",
+      "epistemicStatus": "confirmed",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright",
+      "verificationRecord": {
+        "verificationMethod": "primary-source-read",
+        "verifiedBy": "urn:agent:jwright",
+        "verifiedAt": "2026-09-11T10:00:00Z",
+        "recencyWindowEnd": "2027-09-11T10:00:00Z",
+        "verificationEvidenceRef": "urn:evidence:ppg-1"
+      },
+      "register": "plain"
+    }
+  ],
+  "writeSet": [
+    {
+      "id": "tcf:C2",
+      "type": "Cluster",
+      "members": [
+        "tcf:P11",
+        "tcf:P8"
+      ],
+      "epistemicStatus": "inferred"
+    }
+  ],
+  "expected": {
+    "outcome": "Accept",
+    "computedStatusAbsent": [
+      "tcf:C2"
+    ]
+  }
+}

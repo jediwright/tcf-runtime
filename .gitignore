@@ -22,3 +22,7 @@ venv/
 # Runtime output — never commit these
 records/scratch/
 *.report.tmp
+
+# Store adapter commit log — local run artifact
+fixtures/stores/commits.jsonl
+fixtures/stores/**/commits.jsonl

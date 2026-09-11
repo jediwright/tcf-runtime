@@ -1,0 +1,86 @@
+{
+  "id": "F-12",
+  "specRef": "§7.1, §7.3 tier ordering",
+  "prior": [
+    {
+      "id": "tcf:P8",
+      "type": "Particle",
+      "epistemicStatus": "confirmed",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright",
+      "verificationRecord": {
+        "verificationMethod": "primary-source-read",
+        "verifiedBy": "urn:agent:jwright",
+        "verifiedAt": "2026-09-11T10:00:00Z",
+        "recencyWindowEnd": "2027-09-11T10:00:00Z",
+        "verificationEvidenceRef": "urn:evidence:ppg-1"
+      },
+      "register": "plain"
+    },
+    {
+      "id": "tcf:P9",
+      "type": "Particle",
+      "epistemicStatus": "time-sensitive",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright",
+      "temporalValidity": {
+        "validFrom": "2026-09-01",
+        "validUntil": "2026-12-31"
+      },
+      "register": "governed-internal"
+    },
+    {
+      "id": "tcf:P10",
+      "type": "Particle",
+      "epistemicStatus": "inferred",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright",
+      "derivationRecord": {
+        "derivedFrom": [
+          "tcf:P8",
+          "tcf:P9"
+        ],
+        "reasoningStep": "synthesis of P8 and P9",
+        "confidenceBasis": "two verified inputs"
+      }
+    },
+    {
+      "id": "tcf:C1",
+      "type": "Cluster",
+      "members": [
+        "tcf:P8",
+        "tcf:P9",
+        "tcf:P10"
+      ],
+      "epistemicStatus": "inferred",
+      "computedStatus": "inferred"
+    }
+  ],
+  "writeSet": [
+    {
+      "id": "tcf:C3",
+      "type": "Cluster",
+      "members": [
+        "tcf:P8"
+      ],
+      "epistemicStatus": "confirmed"
+    },
+    {
+      "id": "tcf:Z1",
+      "type": "Zone",
+      "members": [
+        "tcf:C1",
+        "tcf:C3"
+      ],
+      "epistemicStatus": "inferred"
+    }
+  ],
+  "expected": {
+    "outcome": "Accept",
+    "computedStatus": {
+      "tcf:C3": "confirmed",
+      "tcf:Z1": "inferred"
+    },
+    "timed": true
+  }
+}

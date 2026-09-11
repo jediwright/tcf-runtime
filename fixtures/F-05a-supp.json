@@ -1,0 +1,27 @@
+{
+  "id": "F-05a-supp",
+  "specRef": "§5.2 step 3 (supplementary, build-authored; ratified D-6a 2026-09-11)",
+  "supplementary": true,
+  "prior": [
+    {
+      "id": "tcf:P1",
+      "type": "Particle",
+      "epistemicStatus": "unverified",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright"
+    }
+  ],
+  "writeSet": [
+    {
+      "id": "tcf:P1",
+      "type": "Particle",
+      "epistemicStatus": "inferred",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright"
+    }
+  ],
+  "expected": {
+    "outcome": "Reject",
+    "code": "E-UPGRADE-WITHOUT-VERIFICATION"
+  }
+}

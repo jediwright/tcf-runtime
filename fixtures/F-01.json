@@ -1,0 +1,20 @@
+{
+  "id": "F-01",
+  "specRef": "§3.2",
+  "prior": [],
+  "writeSet": [
+    {
+      "id": "tcf:P1",
+      "type": "Particle",
+      "epistemicStatus": "unverified",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright"
+    }
+  ],
+  "expected": {
+    "outcome": "Accept",
+    "reportViolations": {
+      "tcf:P1": 0
+    }
+  }
+}

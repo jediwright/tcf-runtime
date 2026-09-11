@@ -1,0 +1,18 @@
+{
+  "id": "F-02",
+  "specRef": "§3.2, §5.2 step 2",
+  "prior": [],
+  "writeSet": [
+    {
+      "id": "tcf:P2",
+      "type": "Particle",
+      "epistemicStatus": "confirmed",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright"
+    }
+  ],
+  "expected": {
+    "outcome": "Reject",
+    "code": "E-CONFIRMED-NO-RECORD"
+  }
+}

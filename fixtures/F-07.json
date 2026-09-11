@@ -1,0 +1,20 @@
+{
+  "id": "F-07",
+  "specRef": "§2.3, §5.2 step 1",
+  "storeRoot": "fixtures/stores/corrupt",
+  "prior": [],
+  "writeSet": [
+    {
+      "id": "tcf:P1",
+      "type": "Particle",
+      "epistemicStatus": "unverified",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright"
+    }
+  ],
+  "expected": {
+    "outcome": "Reject",
+    "code": "E-STORE-INVALID",
+    "shapesRan": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "F-11",
+  "specRef": "§5.2 step 7, §3.1",
+  "prior": [],
+  "writeSet": [
+    {
+      "id": "tcf:P12",
+      "type": "Particle",
+      "epistemicStatus": "unverified",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright",
+      "body": "the substrate handles this"
+    }
+  ],
+  "expected": {
+    "outcome": "Accept",
+    "reportEntry": {
+      "tcf:P12": {
+        "constraintClass": "terminology",
+        "severity": "sh:Violation"
+      }
+    },
+    "quarkViolations": {
+      "particle": {
+        "blocking": 1
+      },
+      "cluster": {
+        "blocking": 0,
+        "recorded": 1
+      }
+    }
+  }
+}

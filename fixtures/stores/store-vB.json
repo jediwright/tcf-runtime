@@ -1,0 +1,161 @@
+{
+  "context": {
+    "@version": 1.1,
+    "Biome": "tcf:Biome",
+    "Cluster": "tcf:Cluster",
+    "Ecosystem": "tcf:Ecosystem",
+    "Particle": "tcf:Particle",
+    "Structure": "tcf:Structure",
+    "Zone": "tcf:Zone",
+    "aiProvenance": "tcf:aiProvenance",
+    "authoritySource": {
+      "@id": "tcf:authoritySource",
+      "@type": "@id"
+    },
+    "body": "tcf:body",
+    "claimType": "tcf:claimType",
+    "computedRegister": "tcf:computedRegister",
+    "computedStatus": "tcf:computedStatus",
+    "confidenceBasis": "tcf:confidenceBasis",
+    "derivationRecord": "tcf:derivationRecord",
+    "derivedFrom": {
+      "@container": "@set",
+      "@id": "tcf:derivedFrom",
+      "@type": "@id"
+    },
+    "epistemicStatus": "tcf:epistemicStatus",
+    "id": "@id",
+    "members": {
+      "@container": "@set",
+      "@id": "tcf:members",
+      "@type": "@id"
+    },
+    "reasoningStep": "tcf:reasoningStep",
+    "recencyWindowEnd": {
+      "@id": "tcf:recencyWindowEnd",
+      "@type": "xsd:dateTime"
+    },
+    "register": "tcf:register",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "shapeVersion": {
+      "@id": "tcf:shapeVersion",
+      "@type": "@id"
+    },
+    "statusStale": {
+      "@id": "tcf:statusStale",
+      "@type": "xsd:boolean"
+    },
+    "tcf": "https://jediwright.github.io/tcf-runtime/vocab/tcf#",
+    "temporalValidity": "tcf:temporalValidity",
+    "type": "@type",
+    "validFrom": {
+      "@id": "tcf:validFrom",
+      "@type": "xsd:date"
+    },
+    "validUntil": {
+      "@id": "tcf:validUntil",
+      "@type": "xsd:date"
+    },
+    "validationReport": "tcf:validationReport",
+    "verificationEvidenceRef": {
+      "@id": "tcf:verificationEvidenceRef",
+      "@type": "@id"
+    },
+    "verificationMethod": "tcf:verificationMethod",
+    "verificationRecord": "tcf:verificationRecord",
+    "verifiedAt": {
+      "@id": "tcf:verifiedAt",
+      "@type": "xsd:dateTime"
+    },
+    "verifiedBy": "tcf:verifiedBy",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "quarks": {
+    "tcf:q/epistemic/propagation-v1": {
+      "appliesToTier": [
+        "cluster",
+        "zone",
+        "structure",
+        "ecosystem",
+        "biome"
+      ],
+      "constraintRef": "urn:tcf:shape:PropagationShape",
+      "introducedIn": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11-b",
+      "lineageRef": null,
+      "quarkClass": "epistemic",
+      "quarkId": "tcf:q/epistemic/propagation-v1",
+      "register": "governed-internal",
+      "severity": "sh:Violation",
+      "supersededBy": null
+    },
+    "tcf:q/epistemic/status-v1": {
+      "appliesToTier": [
+        "particle"
+      ],
+      "constraintRef": "urn:tcf:shape:EpistemicStatusShape",
+      "introducedIn": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11-b",
+      "lineageRef": null,
+      "quarkClass": "epistemic",
+      "quarkId": "tcf:q/epistemic/status-v1",
+      "register": "governed-internal",
+      "severity": "sh:Violation",
+      "supersededBy": null
+    },
+    "tcf:q/register/grant-requirement": {
+      "appliesToTier": [
+        "particle",
+        "cluster",
+        "zone",
+        "structure",
+        "ecosystem",
+        "biome"
+      ],
+      "constraintRef": null,
+      "evaluated": false,
+      "introducedIn": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11-b",
+      "lineageRef": null,
+      "quarkClass": "register",
+      "quarkId": "tcf:q/register/grant-requirement",
+      "register": "governed-internal",
+      "severity": "sh:Warning",
+      "supersededBy": null
+    },
+    "tcf:q/terminology/plain-register-v1": {
+      "appliesToTier": [
+        "particle",
+        "cluster"
+      ],
+      "constraintRef": "urn:tcf:shape:PlainRegisterTerminologyShape",
+      "introducedIn": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11-b",
+      "lineageRef": null,
+      "quarkClass": "terminology",
+      "quarkId": "tcf:q/terminology/plain-register-v1",
+      "register": "plain",
+      "severity": "sh:Violation",
+      "supersededBy": "tcf:q/terminology/plain-register-v2"
+    },
+    "tcf:q/terminology/plain-register-v2": {
+      "appliesToTier": [
+        "particle",
+        "cluster"
+      ],
+      "constraintRef": "urn:tcf:shape:PlainRegisterTerminologyShape",
+      "introducedIn": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11-b",
+      "lineageRef": null,
+      "quarkClass": "terminology",
+      "quarkId": "tcf:q/terminology/plain-register-v2",
+      "register": "plain",
+      "severity": "sh:Violation",
+      "supersededBy": null
+    }
+  },
+  "shapes": {
+    "https://jediwright.github.io/tcf-runtime/vocab/tcf#sh/EpistemicStatusShape": "@prefix sh:  <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix tcf: <https://jediwright.github.io/tcf-runtime/vocab/tcf#> .\n\ntcf:sh\\/EpistemicStatusShape\n    a sh:NodeShape ;\n    sh:targetClass tcf:Particle ;\n    sh:severity sh:Violation ;\n    tcf:quarkId tcf:q\\/epistemic\\/status-v1 ;\n    tcf:constraintClass \"epistemic\" ;\n    sh:property [\n        sh:path tcf:epistemicStatus ;\n        sh:minCount 1 ; sh:maxCount 1 ;\n        sh:in ( \"confirmed\" \"time-sensitive\" \"inferred\" \"unverified\" )\n    ] ;\n    sh:property [ sh:path tcf:claimType ; sh:minCount 1 ; sh:in ( \"fact\" \"claim\" \"opinion\" \"policy\" ) ] ;\n    sh:property [ sh:path tcf:authoritySource ; sh:minCount 1 ] ;\n    sh:or (\n        [ sh:property [ sh:path tcf:epistemicStatus ; sh:not [ sh:hasValue \"confirmed\" ] ] ]\n        [ sh:property [ sh:path tcf:verificationRecord ; sh:minCount 1 ; sh:node tcf:sh\\/VerificationRecordShape ] ]\n    ) ;\n    sh:or (\n        [ sh:property [ sh:path tcf:epistemicStatus ; sh:not [ sh:hasValue \"time-sensitive\" ] ] ]\n        [ sh:property [ sh:path tcf:temporalValidity ; sh:minCount 1 ; sh:node tcf:sh\\/TemporalValidityShape ] ]\n    ) ;\n    sh:property [ sh:path tcf:aiProvenance ; sh:maxCount 1 ] .\n",
+    "https://jediwright.github.io/tcf-runtime/vocab/tcf#sh/PlainRegisterTerminologyShape": "@prefix sh:  <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix tcf: <https://jediwright.github.io/tcf-runtime/vocab/tcf#> .\n\ntcf:sh\\/PlainRegisterTerminologyShape\n    a sh:NodeShape ;\n    sh:targetClass tcf:Particle, tcf:Cluster ;\n    sh:severity sh:Violation ;\n    tcf:quarkId tcf:q\\/terminology\\/plain-register-v2 ;\n    tcf:constraintClass \"terminology\" ;\n    sh:property [\n        sh:path tcf:body ;\n        sh:pattern \"^(?!.*\\\\b(substrate|floor|stack|pipeline)\\\\b).*$\" ;\n        sh:flags \"i\" ;\n        sh:message \"R-1 term in plain-register content\"\n    ] .\n",
+    "https://jediwright.github.io/tcf-runtime/vocab/tcf#sh/PropagationShape": "@prefix sh:  <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix tcf: <https://jediwright.github.io/tcf-runtime/vocab/tcf#> .\n\ntcf:sh\\/PropagationShape\n    a sh:NodeShape ;\n    sh:targetClass tcf:Cluster, tcf:Zone, tcf:Structure, tcf:Ecosystem, tcf:Biome ;\n    sh:severity sh:Violation ;\n    tcf:quarkId tcf:q\\/epistemic\\/propagation-v1 ;\n    tcf:constraintClass \"epistemic\" ;\n    sh:property [ sh:path tcf:computedStatus ; sh:minCount 1 ; sh:maxCount 1 ] ;\n    sh:sparql [\n        sh:message \"Declared status exceeds computed weakest-status of members\" ;\n        sh:select \"\"\"\n            PREFIX tcf: <https://jediwright.github.io/tcf-runtime/vocab/tcf#>\n            SELECT $this ?declared ?computed WHERE {\n                $this tcf:epistemicStatus ?declared ; tcf:computedStatus ?computed .\n                BIND( IF(?declared=\"confirmed\",3,IF(?declared=\"time-sensitive\",2,IF(?declared=\"inferred\",1,IF(?declared=\"unverified\",0,?__unbound)))) AS ?rd )\n                BIND( IF(?computed=\"confirmed\",3,IF(?computed=\"time-sensitive\",2,IF(?computed=\"inferred\",1,IF(?computed=\"unverified\",0,?__unbound)))) AS ?rc )\n                FILTER( ?rd > ?rc )\n            }\n        \"\"\"\n    ] .\n",
+    "https://jediwright.github.io/tcf-runtime/vocab/tcf#sh/VerificationRecordShape": "@prefix sh:  <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix tcf: <https://jediwright.github.io/tcf-runtime/vocab/tcf#> .\n\ntcf:sh\\/VerificationRecordShape\n    a sh:NodeShape ;\n    sh:property [ sh:path tcf:verificationMethod ; sh:minCount 1 ;\n                  sh:in ( \"primary-source-read\" \"external-attestation\" \"operator-attestation\" \"automated-check\" ) ] ;\n    sh:property [ sh:path tcf:verifiedBy ; sh:minCount 1 ] ;\n    sh:property [ sh:path tcf:verifiedAt ; sh:minCount 1 ; sh:datatype xsd:dateTime ] ;\n    sh:property [ sh:path tcf:recencyWindowEnd ; sh:minCount 1 ; sh:datatype xsd:dateTime ] ;\n    sh:property [ sh:path tcf:verificationEvidenceRef ; sh:minCount 0 ] .\n\ntcf:sh\\/DerivationRecordShape\n    a sh:NodeShape ;\n    sh:property [ sh:path tcf:derivedFrom ; sh:minCount 1 ; sh:class tcf:Particle ] ;\n    sh:property [ sh:path tcf:reasoningStep ; sh:minCount 1 ] ;\n    sh:property [ sh:path tcf:confidenceBasis ; sh:minCount 1 ] .\n\ntcf:sh\\/TemporalValidityShape\n    a sh:NodeShape ;\n    sh:property [ sh:path tcf:validFrom ; sh:minCount 1 ; sh:datatype xsd:date ] ;\n    sh:property [ sh:path tcf:validUntil ; sh:minCount 1 ; sh:datatype xsd:date ] .\n"
+  },
+  "storeId": "urn:tcf:quark-store:did:web:jediwright.github.io",
+  "tcfShapeVersion": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11-b",
+  "versionDigest": "sha256:69f93c9ac26729a21a5c919f31d94289397dbbbbac63f040ad05eeca60f6eece"
+}

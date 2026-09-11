@@ -1,0 +1,40 @@
+{
+  "id": "F-06b",
+  "specRef": "§5.2 step 4",
+  "prior": [
+    {
+      "id": "tcf:P5",
+      "type": "Particle",
+      "epistemicStatus": "inferred",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright"
+    },
+    {
+      "id": "tcf:P6",
+      "type": "Particle",
+      "epistemicStatus": "unverified",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright"
+    }
+  ],
+  "writeSet": [
+    {
+      "id": "tcf:P7",
+      "type": "Particle",
+      "epistemicStatus": "unverified",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright",
+      "derivationRecord": {
+        "derivedFrom": [
+          "tcf:P5",
+          "tcf:P6"
+        ],
+        "reasoningStep": "s",
+        "confidenceBasis": "b"
+      }
+    }
+  ],
+  "expected": {
+    "outcome": "Accept"
+  }
+}

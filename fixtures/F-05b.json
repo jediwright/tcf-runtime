@@ -1,0 +1,32 @@
+{
+  "id": "F-05b",
+  "specRef": "§5.2 step 3, §3.3",
+  "prior": [
+    {
+      "id": "tcf:P1",
+      "type": "Particle",
+      "epistemicStatus": "unverified",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright"
+    }
+  ],
+  "writeSet": [
+    {
+      "id": "tcf:P1",
+      "type": "Particle",
+      "epistemicStatus": "confirmed",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright",
+      "verificationRecord": {
+        "verificationMethod": "primary-source-read",
+        "verifiedBy": "urn:agent:jwright",
+        "verifiedAt": "2026-09-11T10:00:00Z",
+        "recencyWindowEnd": "2027-09-11T10:00:00Z",
+        "verificationEvidenceRef": "urn:evidence:ppg-1"
+      }
+    }
+  ],
+  "expected": {
+    "outcome": "Accept"
+  }
+}

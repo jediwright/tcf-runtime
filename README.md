@@ -50,3 +50,17 @@ Runtime spec issued 2026-08-24 as a companion to Pattern Commons #9 (Survival Le
 ## License
 
 MIT — Jedi Wright, Systems of Thought, UX Minds, LLC. AI-collaborative drafting, human authorial responsibility, intellectual direction held by the named author.
+
+## State
+
+**Phase 0 complete (2026-09-11).** A working write-time gate on fixtures with the engine pinned (pyshacl 0.40.1 / rdflib 7.6.0). See [`records/phase0-build-record_2026-09-11.md`](records/phase0-build-record_2026-09-11.md) for what "functional" means, what it does not, and the findings table feeding runtime v0.2 and TCF v1.8.
+
+## Run
+
+```
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.lock
+python -m tools.seal_store
+python -m tools.check_b1_b2
+python -m tools.run_fixtures
+```

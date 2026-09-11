@@ -1,0 +1,589 @@
+{
+  "rows": [
+    {
+      "id": "F-01",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Accept",
+          "Accept"
+        ],
+        [
+          "report tcf:P1 violations",
+          0,
+          0
+        ]
+      ],
+      "got": {
+        "outcome": "Accept",
+        "computedStatus": {},
+        "computedRegister": {},
+        "stale": [],
+        "shapeVersions": {
+          "tcf:P1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+        },
+        "propagationSeconds": 1.6207999999989786e-05
+      },
+      "specRef": "\u00a73.2"
+    },
+    {
+      "id": "F-02",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Reject",
+          "Reject"
+        ],
+        [
+          "code",
+          "E-CONFIRMED-NO-RECORD",
+          "E-CONFIRMED-NO-RECORD"
+        ]
+      ],
+      "got": {
+        "outcome": "Reject",
+        "code": "E-CONFIRMED-NO-RECORD",
+        "detail": "OrConstraintComponent@",
+        "step": 2
+      },
+      "specRef": "\u00a73.2, \u00a75.2 step 2"
+    },
+    {
+      "id": "F-03",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Reject",
+          "Reject"
+        ],
+        [
+          "code",
+          "E-TIMESENSITIVE-NO-VALIDITY",
+          "E-TIMESENSITIVE-NO-VALIDITY"
+        ]
+      ],
+      "got": {
+        "outcome": "Reject",
+        "code": "E-TIMESENSITIVE-NO-VALIDITY",
+        "detail": "OrConstraintComponent@",
+        "step": 2
+      },
+      "specRef": "\u00a73.2"
+    },
+    {
+      "id": "F-04",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Reject",
+          "Reject"
+        ],
+        [
+          "code",
+          "E-STATUS-VOCAB",
+          "E-STATUS-VOCAB"
+        ]
+      ],
+      "got": {
+        "outcome": "Reject",
+        "code": "E-STATUS-VOCAB",
+        "detail": "InConstraintComponent@epistemicStatus",
+        "step": 2
+      },
+      "specRef": "\u00a73.2"
+    },
+    {
+      "id": "F-05a-supp",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Reject",
+          "Reject"
+        ],
+        [
+          "code",
+          "E-UPGRADE-WITHOUT-VERIFICATION",
+          "E-UPGRADE-WITHOUT-VERIFICATION"
+        ]
+      ],
+      "got": {
+        "outcome": "Reject",
+        "code": "E-UPGRADE-WITHOUT-VERIFICATION",
+        "detail": "https://jediwright.github.io/tcf-runtime/vocab/tcf#P1 unverified -> inferred with no verificationRecord in write set",
+        "step": 3
+      },
+      "specRef": "\u00a75.2 step 3 (supplementary, build-authored; ratified D-6a 2026-09-11)"
+    },
+    {
+      "id": "F-05a",
+      "ok": false,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Reject",
+          "Reject"
+        ],
+        [
+          "code",
+          "E-UPGRADE-WITHOUT-VERIFICATION",
+          "E-CONFIRMED-NO-RECORD"
+        ]
+      ],
+      "got": {
+        "outcome": "Reject",
+        "code": "E-CONFIRMED-NO-RECORD",
+        "detail": "OrConstraintComponent@",
+        "step": 2
+      },
+      "specRef": "\u00a75.2 step 3"
+    },
+    {
+      "id": "F-05b",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Accept",
+          "Accept"
+        ]
+      ],
+      "got": {
+        "outcome": "Accept",
+        "computedStatus": {},
+        "computedRegister": {},
+        "stale": [],
+        "shapeVersions": {
+          "tcf:P1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+        },
+        "propagationSeconds": 1.566699999999699e-05
+      },
+      "specRef": "\u00a75.2 step 3, \u00a73.3"
+    },
+    {
+      "id": "F-05c",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Accept",
+          "Accept"
+        ]
+      ],
+      "got": {
+        "outcome": "Accept",
+        "computedStatus": {},
+        "computedRegister": {},
+        "stale": [],
+        "shapeVersions": {
+          "tcf:P1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+        },
+        "propagationSeconds": 1.5209000000016015e-05
+      },
+      "specRef": "\u00a75.2 step 3"
+    },
+    {
+      "id": "F-06",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Reject",
+          "Reject"
+        ],
+        [
+          "code",
+          "E-DERIVATION-EXCEEDS-INPUT",
+          "E-DERIVATION-EXCEEDS-INPUT"
+        ]
+      ],
+      "got": {
+        "outcome": "Reject",
+        "code": "E-DERIVATION-EXCEEDS-INPUT",
+        "detail": "https://jediwright.github.io/tcf-runtime/vocab/tcf#P7 rank 1 > min input rank 0",
+        "step": 4
+      },
+      "specRef": "\u00a75.2 step 4"
+    },
+    {
+      "id": "F-06b",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Accept",
+          "Accept"
+        ]
+      ],
+      "got": {
+        "outcome": "Accept",
+        "computedStatus": {},
+        "computedRegister": {},
+        "stale": [],
+        "shapeVersions": {
+          "tcf:P7": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+        },
+        "propagationSeconds": 1.6375000000012907e-05
+      },
+      "specRef": "\u00a75.2 step 4"
+    },
+    {
+      "id": "F-07",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Reject",
+          "Reject"
+        ],
+        [
+          "code",
+          "E-STORE-INVALID",
+          "E-STORE-INVALID"
+        ],
+        [
+          "shapesRan",
+          false,
+          false
+        ]
+      ],
+      "got": {
+        "outcome": "Reject",
+        "code": "E-STORE-INVALID",
+        "detail": "versionDigest 'sha256:68b0836422a2b41956ddba38e1d876c090276ea7b40fd11bc733fb7aab05eec0' != computed 'sha256:68b0836422a2b41956ddba38e1d876c090276ea7b40fd11bc733fb7aab05eec9' for https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11",
+        "step": 1
+      },
+      "specRef": "\u00a72.3, \u00a75.2 step 1"
+    },
+    {
+      "id": "F-08",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Accept",
+          "Accept"
+        ],
+        [
+          "computedStatus tcf:C1",
+          "inferred",
+          "inferred"
+        ],
+        [
+          "witness tcf:C1",
+          "tcf:P10",
+          "tcf:P10"
+        ]
+      ],
+      "got": {
+        "outcome": "Accept",
+        "computedStatus": {
+          "tcf:C1": "inferred"
+        },
+        "computedRegister": {
+          "tcf:C1": "governed-internal"
+        },
+        "stale": [],
+        "shapeVersions": {
+          "tcf:C1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+        },
+        "propagationSeconds": 0.040488707999999984
+      },
+      "specRef": "\u00a77.1; PC#9 tcfComputedStatusWitness"
+    },
+    {
+      "id": "F-09",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Accept",
+          "Accept"
+        ],
+        [
+          "stale",
+          [
+            "tcf:C1"
+          ],
+          [
+            "tcf:C1"
+          ]
+        ],
+        [
+          "report tcf:C1 has SPARQLConstraintComponent",
+          true,
+          true
+        ]
+      ],
+      "got": {
+        "outcome": "Accept",
+        "computedStatus": {
+          "tcf:C1": "inferred"
+        },
+        "computedRegister": {
+          "tcf:C1": "governed-internal"
+        },
+        "stale": [
+          "tcf:C1"
+        ],
+        "shapeVersions": {
+          "tcf:P8": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+        },
+        "propagationSeconds": 0.02218808299999997
+      },
+      "specRef": "\u00a75.2 step 6, \u00a73.4"
+    },
+    {
+      "id": "F-10",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Accept",
+          "Accept"
+        ],
+        [
+          "computedStatus tcf:C2 absent",
+          true,
+          true
+        ]
+      ],
+      "got": {
+        "outcome": "Accept",
+        "computedStatus": {},
+        "computedRegister": {
+          "tcf:C2": "plain"
+        },
+        "stale": [],
+        "shapeVersions": {
+          "tcf:C2": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+        },
+        "propagationSeconds": 0.021869874999999928,
+        "computedStatus tcf:C2": "None"
+      },
+      "specRef": "\u00a77.3 silence"
+    },
+    {
+      "id": "F-11",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Accept",
+          "Accept"
+        ],
+        [
+          "report tcf:P12 entry",
+          {
+            "constraintClass": "terminology",
+            "severity": "sh:Violation"
+          },
+          {
+            "constraintClass": "terminology",
+            "severity": "sh:Violation"
+          }
+        ],
+        [
+          "tcfQuarkViolations@particle.blocking",
+          1,
+          1
+        ],
+        [
+          "tcfQuarkViolations@cluster.blocking",
+          0,
+          0
+        ],
+        [
+          "tcfQuarkViolations@cluster.recorded",
+          1,
+          1
+        ]
+      ],
+      "got": {
+        "outcome": "Accept",
+        "computedStatus": {},
+        "computedRegister": {},
+        "stale": [],
+        "shapeVersions": {
+          "tcf:P12": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+        },
+        "propagationSeconds": 1.5083000000082336e-05
+      },
+      "specRef": "\u00a75.2 step 7, \u00a73.1"
+    },
+    {
+      "id": "F-12",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Accept",
+          "Accept"
+        ],
+        [
+          "computedStatus tcf:C3",
+          "confirmed",
+          "confirmed"
+        ],
+        [
+          "computedStatus tcf:Z1",
+          "inferred",
+          "inferred"
+        ]
+      ],
+      "got": {
+        "outcome": "Accept",
+        "computedStatus": {
+          "tcf:C3": "confirmed",
+          "tcf:Z1": "inferred"
+        },
+        "computedRegister": {
+          "tcf:C3": "plain",
+          "tcf:Z1": "plain"
+        },
+        "stale": [],
+        "shapeVersions": {
+          "tcf:C3": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11",
+          "tcf:Z1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+        },
+        "propagationSeconds": 0.05298654199999997
+      },
+      "specRef": "\u00a77.1, \u00a77.3 tier ordering"
+    },
+    {
+      "id": "F-13",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Accept",
+          "Accept"
+        ],
+        [
+          "computedRegister tcf:C4",
+          "governed-internal",
+          "governed-internal"
+        ],
+        [
+          "blocking entries",
+          0,
+          0
+        ]
+      ],
+      "got": {
+        "outcome": "Accept",
+        "computedStatus": {
+          "tcf:C4": "time-sensitive"
+        },
+        "computedRegister": {
+          "tcf:C4": "governed-internal"
+        },
+        "stale": [],
+        "shapeVersions": {
+          "tcf:C4": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+        },
+        "propagationSeconds": 0.02050695799999991
+      },
+      "specRef": "\u00a77.4, KL-4"
+    },
+    {
+      "id": "F-14",
+      "ok": true,
+      "optional": false,
+      "checks": [
+        [
+          "outcome",
+          "Accept",
+          "Accept"
+        ],
+        [
+          "shapeVersion tcf:C1",
+          "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11",
+          "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+        ]
+      ],
+      "got": {
+        "outcome": "Accept",
+        "computedStatus": {
+          "tcf:C1": "inferred"
+        },
+        "computedRegister": {
+          "tcf:C1": "governed-internal"
+        },
+        "stale": [],
+        "shapeVersions": {
+          "tcf:C1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+        },
+        "propagationSeconds": 0.02146283400000004
+      },
+      "specRef": "\u00a75.2 step 1, \u00a75.3 last bullet"
+    },
+    {
+      "id": "F-15",
+      "ok": true,
+      "optional": true,
+      "checks": [
+        [
+          "outcome",
+          "Accept",
+          "Accept"
+        ],
+        [
+          "evidenceDecay",
+          null,
+          null
+        ],
+        [
+          "evidenceDecay (rerun)",
+          "2026-12-31",
+          "2026-12-31"
+        ]
+      ],
+      "got": {
+        "outcome": "Accept",
+        "computedStatus": {
+          "tcf:C1": "inferred"
+        },
+        "computedRegister": {
+          "tcf:C1": "governed-internal"
+        },
+        "stale": [],
+        "shapeVersions": {
+          "tcf:C1": "https://jediwright.github.io/tcf-runtime/vocab/tcf/2026-09-11"
+        },
+        "propagationSeconds": 0.02117150000000001,
+        "evidenceDecay": null,
+        "evidenceDecay2": "2026-12-31"
+      },
+      "specRef": "\u00a77.5"
+    }
+  ],
+  "codesReached": [
+    "E-CONFIRMED-NO-RECORD",
+    "E-DERIVATION-EXCEEDS-INPUT",
+    "E-STATUS-VOCAB",
+    "E-STORE-INVALID",
+    "E-TIMESENSITIVE-NO-VALIDITY"
+  ]
+}

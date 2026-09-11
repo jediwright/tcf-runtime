@@ -1,0 +1,18 @@
+{
+  "id": "F-04",
+  "specRef": "§3.2",
+  "prior": [],
+  "writeSet": [
+    {
+      "id": "tcf:P4",
+      "type": "Particle",
+      "epistemicStatus": "verified",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright"
+    }
+  ],
+  "expected": {
+    "outcome": "Reject",
+    "code": "E-STATUS-VOCAB"
+  }
+}

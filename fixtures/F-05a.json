@@ -1,0 +1,26 @@
+{
+  "id": "F-05a",
+  "specRef": "§5.2 step 3",
+  "prior": [
+    {
+      "id": "tcf:P1",
+      "type": "Particle",
+      "epistemicStatus": "unverified",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright"
+    }
+  ],
+  "writeSet": [
+    {
+      "id": "tcf:P1",
+      "type": "Particle",
+      "epistemicStatus": "confirmed",
+      "claimType": "claim",
+      "authoritySource": "urn:agent:jwright"
+    }
+  ],
+  "expected": {
+    "outcome": "Reject",
+    "code": "E-UPGRADE-WITHOUT-VERIFICATION"
+  }
+}

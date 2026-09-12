@@ -1,6 +1,6 @@
 # tcf-runtime
 
-Executable runtime for the [Tiered Content Framework](https://www.jediwright.com/content-strategy-framework). This repository **implements** the framework; it is **not** its canonical text. The framework is versioned and amended on its published page. This repository tracks that page and never leads it.
+Executable runtime for the [Tiered Content Framework](https://www.jediwright.com/content-strategy-framework). This repository **implements** the framework; it is not its canonical text. The framework is versioned and amended on its published page. This repository re-issues its spec to match the page; where a build finds a defect in the framework's text, that finding goes to the framework's next revision as an input, not as an amendment made here.
 
 ## What this is
 

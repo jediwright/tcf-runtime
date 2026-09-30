@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Tiered Content Framework — Jedi Wright</title>
+<meta name="description" content="An animated one-sheet of the Tiered Content Framework: seven governance tiers, three cross-cutting dimensions, one propagation logic.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0;background:#081225}
+a{color:#F2B84B}a:hover{color:#FFD58A}
+@keyframes tcfFloat{0%,100%{transform:translateY(-5px)}50%{transform:translateY(5px)}}
+@keyframes tcfPulse{0%{transform:translateY(0);opacity:0}4%{opacity:1}78%{transform:translateY(1124px);opacity:1}84%{transform:translateY(1124px);opacity:0}100%{transform:translateY(1124px);opacity:0}}
+@keyframes tcfFlash{0%{opacity:0}3%{opacity:1}16%{opacity:0}100%{opacity:0}}
+@keyframes tcfFlow{to{stroke-dashoffset:-60}}
+@keyframes tcfRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.tcf-on .tcf-float{animation:tcfFloat 6s ease-in-out infinite}
+.tcf-on .tcf-pulse{animation:tcfPulse 8.0s linear infinite}
+.tcf-on .tcf-flash{opacity:0;animation:tcfFlash 8.0s ease-out infinite}
+.tcf-on .tcf-flow{animation:tcfFlow 3s linear infinite}
+.tcf-on .tcf-dash{animation:tcfFlow 5s linear infinite}
+.tcf-on .tcf-rise{animation:tcfRise 1.2s cubic-bezier(.2,.7,.2,1) both}
+.tcf-off .tcf-flash{opacity:0}
+.tcf-off .tcf-pulse{transform:translateY(672px)}
+@media (prefers-reduced-motion: reduce){.tcf-on *{animation:none!important}.tcf-on .tcf-flash{opacity:0}}
+html,body{height:100%}
+body{display:flex;justify-content:center;overflow-x:hidden}
+#tcf-stage{width:1440px;height:2156px;transform-origin:top center;flex-shrink:0}
+</style>
+</head>
+<body>
+<main id="tcf-stage" aria-label="The Tiered Content Framework one-sheet">
+<div class="tcf-on" style="position: relative; width: 1440px; height: 2156px; overflow: hidden; background: #081225; font-family: Inter, system-ui, sans-serif; color: #EAF2FA">
+<svg style="position: absolute; left: 0; top: 0" width="1440" height="2156" aria-hidden="true"><defs><pattern id="tcfdots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#7DB9E3"/></pattern></defs><rect width="1440" height="2156" fill="url(#tcfdots)" opacity="0.09"/></svg>
+<div style="position: absolute; left: 80px; top: 72px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.18em; color: #8FA6BD">SYSTEMS OF THOUGHT · CONTENT GOVERNANCE MODEL · TCF v1.7.5</div>
+<h1 class="tcf-rise" style="position: absolute; left: 76px; top: 110px; margin: 0; width: 760px; font-family: 'Libre Baskerville', Georgia, serif; font-weight: 400; font-size: 84px; line-height: 1.02; letter-spacing: -0.02em; color: #EAF2FA">The Tiered<br><em style="color: #F2B84B">Content</em> Framework</h1>
+<div class="tcf-rise" style="position: absolute; left: 900px; top: 132px; width: 460px; display: flex; flex-direction: column; gap: 14px; animation-delay: 0.25s">
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.16em; color: #F2B84B">THE ONE RULE</div>
+<p style="margin: 0; font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 24px; line-height: 1.4; color: #EAF2FA">Govern meaning at the lowest tier possible. Escalate only when structural impact demands it.</p>
+<p style="margin: 0; font-family: Inter, system-ui, sans-serif; font-size: 15px; line-height: 1.55; color: #B4C6D8">Atomic Design, extended into the content layer. Seven tiers, three cross-cutting dimensions, one propagation logic from the smallest constraint to the whole presence.</p>
+</div>
+<div style="position: absolute; left: 890px; top: 416px; width: 1px; height: 1124px; background: #F2B84B; opacity: 0.28"></div><div class="tcf-pulse" style="position: absolute; left: 883px; top: 409px; width: 14px; height: 14px; border-radius: 50%; background: #F2B84B; box-shadow: 0 0 0 6px rgba(242,184,75,0.18), 0 0 28px 6px rgba(242,184,75,0.45)"></div>
+<svg style="position: absolute; left: 1256px; top: 416px" width="12" height="1124" viewBox="0 0 12 1124" aria-hidden="true"><line class="tcf-flow" x1="6" y1="0" x2="6" y2="1124" stroke="#7DB9E3" stroke-width="1.2" stroke-dasharray="1 9" stroke-linecap="round" style="animation-delay: 0.0s"/></svg>
+<div style="position: absolute; left: 1258px; top: 466px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1258px; top: 602px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1258px; top: 752px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1258px; top: 907px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1258px; top: 1084px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1258px; top: 1285px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1258px; top: 1512px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1253px; top: 1558px; writing-mode: vertical-rl; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.16em; color: #9FC6E6; white-space: nowrap">INTELLIGENCE</div>
+<svg style="position: absolute; left: 1306px; top: 416px" width="12" height="1124" viewBox="0 0 12 1124" aria-hidden="true"><line class="tcf-flow" x1="6" y1="0" x2="6" y2="1124" stroke="#7DB9E3" stroke-width="1.2" stroke-dasharray="1 9" stroke-linecap="round" style="animation-delay: -0.6s"/></svg>
+<div style="position: absolute; left: 1308px; top: 466px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1308px; top: 602px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1308px; top: 752px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1308px; top: 907px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1308px; top: 1084px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1308px; top: 1285px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1308px; top: 1512px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1303px; top: 1558px; writing-mode: vertical-rl; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.16em; color: #9FC6E6; white-space: nowrap">TAXONOMY</div>
+<svg style="position: absolute; left: 1356px; top: 416px" width="12" height="1124" viewBox="0 0 12 1124" aria-hidden="true"><line class="tcf-flow" x1="6" y1="0" x2="6" y2="1124" stroke="#7DB9E3" stroke-width="1.2" stroke-dasharray="1 9" stroke-linecap="round" style="animation-delay: -1.2s"/></svg>
+<div style="position: absolute; left: 1358px; top: 466px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1358px; top: 602px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1358px; top: 752px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1358px; top: 907px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1358px; top: 1084px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1358px; top: 1285px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1358px; top: 1512px; width: 8px; height: 8px; border-radius: 50%; background: #081225; border: 1.5px solid #7DB9E3"></div>
+<div style="position: absolute; left: 1353px; top: 1558px; writing-mode: vertical-rl; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.16em; color: #9FC6E6; white-space: nowrap">MACHINE-LEGIBILITY</div>
+<div style="position: absolute; left: 1004px; top: 470px; width: 358px; height: 0; border-top: 1px dotted #2B4764"></div>
+<div style="position: absolute; left: 1017px; top: 606px; width: 345px; height: 0; border-top: 1px dotted #2B4764"></div>
+<div style="position: absolute; left: 1042px; top: 756px; width: 320px; height: 0; border-top: 1px dotted #2B4764"></div>
+<div style="position: absolute; left: 1077px; top: 911px; width: 285px; height: 0; border-top: 1px dotted #2B4764"></div>
+<div style="position: absolute; left: 1112px; top: 1088px; width: 250px; height: 0; border-top: 1px dotted #2B4764"></div>
+<div style="position: absolute; left: 1152px; top: 1289px; width: 210px; height: 0; border-top: 1px dotted #2B4764"></div>
+<div style="position: absolute; left: 1192px; top: 1516px; width: 170px; height: 0; border-top: 1px dotted #2B4764"></div>
+<div class="tcf-float" style="position: absolute; left: 576px; top: 1399px; width: 628px; height: 247px; animation-delay: -4.2s">
+<svg width="628" height="247" viewBox="0 0 628 247" aria-hidden="true" style="display: block; overflow: visible">
+<defs><clipPath id="tcfclip6"><circle r="289"></circle></clipPath></defs>
+
+<ellipse cx="314.0" cy="130.8" rx="290" ry="92.8" fill="#061A2C"/><rect x="24.0" y="116.8" width="580" height="14" fill="#061A2C"/><ellipse cx="314.0" cy="116.8" rx="290" ry="92.8" fill="#0D2E4A" stroke="#3F8DC4" stroke-width="1"/>
+<g transform="translate(314.0,116.8) scale(1,0.32)" clip-path="url(#tcfclip6)">
+<circle r="18" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="34" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="50" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="66" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="82" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="98" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="114" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="130" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="146" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="162" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="178" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="194" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="210" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="226" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="242" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="258" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<circle r="274" fill="none" stroke="#BFE0F7" stroke-width="0.7" opacity="0.85" vector-effect="non-scaling-stroke"/>
+<line x1="18.0" y1="0.0" x2="290.0" y2="0.0" stroke="#BFE0F7" stroke-width="0.6" opacity="0.5" vector-effect="non-scaling-stroke"/>
+<line x1="15.6" y1="9.0" x2="251.1" y2="145.0" stroke="#BFE0F7" stroke-width="0.6" opacity="0.5" vector-effect="non-scaling-stroke"/>
+<line x1="9.0" y1="15.6" x2="145.0" y2="251.1" stroke="#BFE0F7" stroke-width="0.6" opacity="0.5" vector-effect="non-scaling-stroke"/>
+<line x1="0.0" y1="18.0" x2="0.0" y2="290.0" stroke="#BFE0F7" stroke-width="0.6" opacity="0.5" vector-effect="non-scaling-stroke"/>
+<line x1="-9.0" y1="15.6" x2="-145.0" y2="251.1" stroke="#BFE0F7" stroke-width="0.6" opacity="0.5" vector-effect="non-scaling-stroke"/>
+<line x1="-15.6" y1="9.0" x2="-251.1" y2="145.0" stroke="#BFE0F7" stroke-width="0.6" opacity="0.5" vector-effect="non-scaling-stroke"/>
+<line x1="-18.0" y1="0.0" x2="-290.0" y2="0.0" stroke="#BFE0F7" stroke-width="0.6" opacity="0.5" vector-effect="non-scaling-stroke"/>
+<line x1="-15.6" y1="-9.0" x2="-251.1" y2="-145.0" stroke="#BFE0F7" stroke-width="0.6" opacity="0.5" vector-effect="non-scaling-stroke"/>
+<line x1="-9.0" y1="-15.6" x2="-145.0" y2="-251.1" stroke="#BFE0F7" stroke-width="0.6" opacity="0.5" vector-effect="non-scaling-stroke"/>
+<line x1="-0.0" y1="-18.0" x2="-0.0" y2="-290.0" stroke="#BFE0F7" stroke-width="0.6" opacity="0.5" vector-effect="non-scaling-stroke"/>
+<line x1="9.0" y1="-15.6" x2="145.0" y2="-251.1" stroke="#BFE0F7" stroke-width="0.6" opacity="0.5" vector-effect="non-scaling-stroke"/>
+<line x1="15.6" y1="-9.0" x2="251.1" y2="-145.0" stroke="#BFE0F7" stroke-width="0.6" opacity="0.5" vector-effect="non-scaling-stroke"/>
+</g>
+<ellipse class="tcf-flash" cx="314.0" cy="116.8" rx="294" ry="94.8" fill="none" stroke="#F2B84B" stroke-width="2.5" style="animation-delay: 6.11s"/>
+</svg>
+</div>
+<div class="tcf-float" style="position: absolute; left: 616px; top: 1185px; width: 548px; height: 222px; animation-delay: -3.5s">
+<svg width="548" height="222" viewBox="0 0 548 222" aria-hidden="true" style="display: block; overflow: visible">
+<defs><clipPath id="tcfclip5"><circle r="249"></circle></clipPath></defs>
+
+<ellipse cx="274.0" cy="118.0" rx="250" ry="80.0" fill="#10405F"/><rect x="24.0" y="104.0" width="500" height="14" fill="#10405F"/><ellipse cx="274.0" cy="104.0" rx="250" ry="80.0" fill="#1D5E8C"/>
+<g transform="translate(274.0,104.0) scale(1,0.32)" clip-path="url(#tcfclip5)">
+<line x1="-88.1" y1="-174.6" x2="-78.7" y2="-117.6" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-88.1" y1="-174.6" x2="-145.6" y2="-168.8" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="75.5" y1="-213.8" x2="57.0" y2="-175.7" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="75.5" y1="-213.8" x2="23.9" y2="-218.6" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="17.9" y1="-67.2" x2="39.9" y2="-21.9" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="17.9" y1="-67.2" x2="69.5" y2="-63.8" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-221.0" y1="3.7" x2="-174.0" y2="-5.5" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-221.0" y1="3.7" x2="-198.2" y2="67.1" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-37.7" y1="163.4" x2="-70.6" y2="192.1" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-37.7" y1="163.4" x2="12.6" y2="187.6" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="179.2" y1="-105.2" x2="114.7" y2="-106.0" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="179.2" y1="-105.2" x2="69.5" y2="-63.8" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-95.8" y1="158.1" x2="-70.6" y2="192.1" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-95.8" y1="158.1" x2="-37.7" y2="163.4" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-159.6" y1="40.8" x2="-198.2" y2="67.1" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-159.6" y1="40.8" x2="-174.0" y2="-5.5" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="69.5" y1="-63.8" x2="39.9" y2="-21.9" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="69.5" y1="-63.8" x2="17.9" y2="-67.2" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="23.9" y1="-218.6" x2="14.1" y2="-176.7" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="23.9" y1="-218.6" x2="75.5" y2="-213.8" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-92.9" y1="42.8" x2="-57.1" y2="84.3" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-92.9" y1="42.8" x2="-133.3" y2="-7.5" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-23.4" y1="-100.1" x2="17.9" y2="-67.2" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-23.4" y1="-100.1" x2="-78.7" y2="-117.6" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="147.2" y1="99.5" x2="132.3" y2="36.5" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="147.2" y1="99.5" x2="12.6" y2="187.6" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="12.6" y1="187.6" x2="-37.7" y2="163.4" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="12.6" y1="187.6" x2="-70.6" y2="192.1" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="114.7" y1="-106.0" x2="69.5" y2="-63.8" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="114.7" y1="-106.0" x2="179.2" y2="-105.2" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-174.0" y1="-5.5" x2="-133.3" y2="-7.5" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-174.0" y1="-5.5" x2="-221.0" y2="3.7" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="132.3" y1="36.5" x2="147.2" y2="99.5" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="132.3" y1="36.5" x2="39.9" y2="-21.9" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="39.9" y1="-21.9" x2="17.9" y2="-67.2" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="39.9" y1="-21.9" x2="69.5" y2="-63.8" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-13.0" y1="82.1" x2="-57.1" y2="84.3" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-13.0" y1="82.1" x2="-37.7" y2="163.4" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-57.1" y1="84.3" x2="-13.0" y2="82.1" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-57.1" y1="84.3" x2="-92.9" y2="42.8" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-185.3" y1="-126.2" x2="-145.6" y2="-168.8" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-185.3" y1="-126.2" x2="-199.3" y2="-68.2" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-110.8" y1="-42.4" x2="-133.3" y2="-7.5" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-110.8" y1="-42.4" x2="-53.8" y2="-50.5" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-70.6" y1="192.1" x2="-95.8" y2="158.1" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-70.6" y1="192.1" x2="-37.7" y2="163.4" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-133.3" y1="-7.5" x2="-174.0" y2="-5.5" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-133.3" y1="-7.5" x2="-110.8" y2="-42.4" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="44.6" y1="-118.6" x2="17.9" y2="-67.2" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="44.6" y1="-118.6" x2="57.0" y2="-175.7" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-53.8" y1="-50.5" x2="-17.0" y2="-8.1" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-53.8" y1="-50.5" x2="-110.8" y2="-42.4" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-198.2" y1="67.1" x2="-159.6" y2="40.8" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-198.2" y1="67.1" x2="-221.0" y2="3.7" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-145.6" y1="-168.8" x2="-88.1" y2="-174.6" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-145.6" y1="-168.8" x2="-185.3" y2="-126.2" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-199.3" y1="-68.2" x2="-185.3" y2="-126.2" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-199.3" y1="-68.2" x2="-174.0" y2="-5.5" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="57.0" y1="-175.7" x2="75.5" y2="-213.8" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="57.0" y1="-175.7" x2="14.1" y2="-176.7" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-17.0" y1="-8.1" x2="-53.8" y2="-50.5" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-17.0" y1="-8.1" x2="39.9" y2="-21.9" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-78.7" y1="-117.6" x2="-88.1" y2="-174.6" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-78.7" y1="-117.6" x2="-23.4" y2="-100.1" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="14.1" y1="-176.7" x2="57.0" y2="-175.7" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="14.1" y1="-176.7" x2="23.9" y2="-218.6" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-166.5" y1="136.0" x2="-95.8" y2="158.1" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<line x1="-166.5" y1="136.0" x2="-198.2" y2="67.1" stroke="#BFE0F7" stroke-width="0.9" opacity="0.8" vector-effect="non-scaling-stroke"/>
+<circle cx="-88.1" cy="-174.6" r="4" fill="#BFE0F7"/>
+<circle cx="75.5" cy="-213.8" r="4" fill="#BFE0F7"/>
+<circle cx="17.9" cy="-67.2" r="4" fill="#BFE0F7"/>
+<circle cx="-221.0" cy="3.7" r="4" fill="#BFE0F7"/>
+<circle cx="-37.7" cy="163.4" r="4" fill="#BFE0F7"/>
+<circle cx="179.2" cy="-105.2" r="4" fill="#BFE0F7"/>
+<circle cx="-95.8" cy="158.1" r="4" fill="#BFE0F7"/>
+<circle cx="-159.6" cy="40.8" r="4" fill="#BFE0F7"/>
+<circle cx="69.5" cy="-63.8" r="4" fill="#BFE0F7"/>
+<circle cx="23.9" cy="-218.6" r="4" fill="#BFE0F7"/>
+<circle cx="-92.9" cy="42.8" r="4" fill="#BFE0F7"/>
+<circle cx="-23.4" cy="-100.1" r="4" fill="#BFE0F7"/>
+<circle cx="147.2" cy="99.5" r="4" fill="#BFE0F7"/>
+<circle cx="12.6" cy="187.6" r="4" fill="#BFE0F7"/>
+<circle cx="114.7" cy="-106.0" r="4" fill="#BFE0F7"/>
+<circle cx="-174.0" cy="-5.5" r="4" fill="#BFE0F7"/>
+<circle cx="132.3" cy="36.5" r="4" fill="#BFE0F7"/>
+<circle cx="39.9" cy="-21.9" r="4" fill="#BFE0F7"/>
+<circle cx="-13.0" cy="82.1" r="4" fill="#BFE0F7"/>
+<circle cx="-57.1" cy="84.3" r="4" fill="#BFE0F7"/>
+<circle cx="-185.3" cy="-126.2" r="4" fill="#BFE0F7"/>
+<circle cx="-110.8" cy="-42.4" r="4" fill="#BFE0F7"/>
+<circle cx="-70.6" cy="192.1" r="4" fill="#BFE0F7"/>
+<circle cx="-133.3" cy="-7.5" r="4" fill="#BFE0F7"/>
+<circle cx="44.6" cy="-118.6" r="4" fill="#BFE0F7"/>
+<circle cx="-53.8" cy="-50.5" r="4" fill="#BFE0F7"/>
+<circle cx="-198.2" cy="67.1" r="4" fill="#BFE0F7"/>
+<circle cx="-145.6" cy="-168.8" r="4" fill="#BFE0F7"/>
+<circle cx="-199.3" cy="-68.2" r="4" fill="#BFE0F7"/>
+<circle cx="57.0" cy="-175.7" r="4" fill="#BFE0F7"/>
+<circle cx="-17.0" cy="-8.1" r="4" fill="#BFE0F7"/>
+<circle cx="-78.7" cy="-117.6" r="4" fill="#BFE0F7"/>
+<circle cx="14.1" cy="-176.7" r="4" fill="#BFE0F7"/>
+<circle cx="-166.5" cy="136.0" r="4" fill="#BFE0F7"/>
+</g>
+<ellipse class="tcf-flash" cx="274.0" cy="104.0" rx="254" ry="82.0" fill="none" stroke="#F2B84B" stroke-width="2.5" style="animation-delay: 4.85s"/>
+</svg>
+</div>
+<div class="tcf-float" style="position: absolute; left: 656px; top: 996px; width: 468px; height: 196px; animation-delay: -2.8s">
+<svg width="468" height="196" viewBox="0 0 468 196" aria-hidden="true" style="display: block; overflow: visible">
+<defs><clipPath id="tcfclip4"><circle r="209"></circle></clipPath></defs>
+<ellipse class="tcf-dash" cx="234.0" cy="98.2" rx="224" ry="76.2" fill="none" stroke="#F2B84B" stroke-width="1.2" stroke-dasharray="2 7"/>
+<ellipse cx="234.0" cy="105.2" rx="210" ry="67.2" fill="#23628F"/><rect x="24.0" y="91.2" width="420" height="14" fill="#23628F"/><ellipse cx="234.0" cy="91.2" rx="210" ry="67.2" fill="#3F8DC4"/>
+<g transform="translate(234.0,91.2) scale(1,0.32)" clip-path="url(#tcfclip4)">
+<rect x="-206" y="-36" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-206" y="-2" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-206" y="32" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-172" y="-104" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-172" y="-70" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-172" y="-36" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-172" y="-2" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-172" y="32" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-172" y="66" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-172" y="100" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-138" y="-138" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-138" y="-104" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-138" y="-70" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-138" y="-36" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-138" y="-2" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-138" y="32" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-138" y="66" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-138" y="100" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-138" y="134" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-104" y="-172" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-104" y="-138" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-104" y="-104" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-104" y="-70" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-104" y="-36" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-104" y="-2" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-104" y="32" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-104" y="66" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-104" y="100" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-104" y="134" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-70" y="-172" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-70" y="-138" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-70" y="-104" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-70" y="-70" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-70" y="-36" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-70" y="-2" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-70" y="32" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-70" y="66" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-70" y="100" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-70" y="134" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-70" y="168" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-36" y="-206" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-36" y="-172" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-36" y="-138" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-36" y="-104" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-36" y="-70" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-36" y="-36" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-36" y="-2" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-36" y="32" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-36" y="66" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-36" y="100" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-36" y="134" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-36" y="168" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-2" y="-206" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-2" y="-172" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-2" y="-138" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-2" y="-104" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-2" y="-70" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-2" y="-36" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-2" y="-2" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-2" y="32" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-2" y="66" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-2" y="100" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-2" y="134" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="-2" y="168" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="32" y="-206" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="32" y="-172" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="32" y="-138" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="32" y="-104" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="32" y="-70" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="32" y="-36" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="32" y="-2" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="32" y="32" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="32" y="66" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="32" y="100" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="32" y="134" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="32" y="168" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="66" y="-172" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="66" y="-138" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="66" y="-104" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="66" y="-70" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="66" y="-36" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="66" y="-2" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="66" y="32" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="66" y="66" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="66" y="100" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="66" y="134" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="66" y="168" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="100" y="-172" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="100" y="-138" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="100" y="-104" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="100" y="-70" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="100" y="-36" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="100" y="-2" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="100" y="32" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="100" y="66" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="100" y="100" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="100" y="134" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="134" y="-138" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="134" y="-104" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="134" y="-70" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="134" y="-36" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="134" y="-2" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="134" y="32" width="60" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="134" y="66" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="134" y="100" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="168" y="-70" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="168" y="-36" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="168" y="-2" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="168" y="32" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+<rect x="168" y="66" width="26" height="26" rx="3" fill="none" stroke="#BFE0F7" stroke-width="1" vector-effect="non-scaling-stroke"/>
+</g>
+<ellipse class="tcf-flash" cx="234.0" cy="91.2" rx="214" ry="69.2" fill="none" stroke="#F2B84B" stroke-width="2.5" style="animation-delay: 3.73s"/>
+</svg>
+</div>
+<div class="tcf-float" style="position: absolute; left: 691px; top: 831px; width: 398px; height: 174px; animation-delay: -2.1s">
+<svg width="398" height="174" viewBox="0 0 398 174" aria-hidden="true" style="display: block; overflow: visible">
+<defs><clipPath id="tcfclip3"><circle r="174"></circle></clipPath></defs>
+
+<ellipse cx="199.0" cy="94.0" rx="175" ry="56.0" fill="#4C88B6"/><rect x="24.0" y="80.0" width="350" height="14" fill="#4C88B6"/><ellipse cx="199.0" cy="80.0" rx="175" ry="56.0" fill="#7DB9E3"/>
+<g transform="translate(199.0,80.0) scale(1,0.32)" clip-path="url(#tcfclip3)">
+<line x1="0" y1="0" x2="175.0" y2="0.0" stroke="#0D2E4A" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<line x1="0" y1="0" x2="87.5" y2="151.6" stroke="#0D2E4A" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<line x1="0" y1="0" x2="-87.5" y2="151.6" stroke="#0D2E4A" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<line x1="0" y1="0" x2="-175.0" y2="0.0" stroke="#0D2E4A" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<line x1="0" y1="0" x2="-87.5" y2="-151.6" stroke="#0D2E4A" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<line x1="0" y1="0" x2="87.5" y2="-151.6" stroke="#0D2E4A" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+<circle r="73.5" fill="none" stroke="#0D2E4A" stroke-width="1" stroke-dasharray="3 5" vector-effect="non-scaling-stroke"/>
+<circle r="129.5" fill="none" stroke="#0D2E4A" stroke-width="1" stroke-dasharray="3 5" vector-effect="non-scaling-stroke"/>
+<path d="M0 0L175.0 0A175 175 0 0 1 87.5 151.6Z" fill="#0D2E4A" opacity="0.18"/>
+</g>
+<ellipse class="tcf-flash" cx="199.0" cy="80.0" rx="179" ry="58.0" fill="none" stroke="#F2B84B" stroke-width="2.5" style="animation-delay: 2.75s"/>
+</svg>
+</div>
+<div class="tcf-float" style="position: absolute; left: 726px; top: 687px; width: 328px; height: 151px; animation-delay: -1.4s">
+<svg width="328" height="151" viewBox="0 0 328 151" aria-hidden="true" style="display: block; overflow: visible">
+<defs><clipPath id="tcfclip2"><circle r="139"></circle></clipPath></defs>
+
+<ellipse cx="164.0" cy="82.80000000000001" rx="140" ry="44.8" fill="#7DAED3"/><rect x="24.0" y="68.80000000000001" width="280" height="14" fill="#7DAED3"/><ellipse cx="164.0" cy="68.80000000000001" rx="140" ry="44.8" fill="#B9DDF5"/>
+<g transform="translate(164.0,68.80000000000001) scale(1,0.32)" clip-path="url(#tcfclip2)">
+<circle cx="-103.9" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-116.1" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-110.0" cy="-57.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-110" cy="-50" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-103.9" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-116.1" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-110.0" cy="-27.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-110" cy="-20" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-103.9" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-116.1" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-110.0" cy="3.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-110" cy="10" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-103.9" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-116.1" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-110.0" cy="33.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-110" cy="40" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-73.9" cy="-76.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-86.1" cy="-76.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-80.0" cy="-87.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-80" cy="-80" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-73.9" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-86.1" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-80.0" cy="-57.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-80" cy="-50" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-73.9" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-86.1" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-80.0" cy="-27.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-80" cy="-20" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-73.9" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-86.1" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-80.0" cy="3.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-80" cy="10" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-73.9" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-86.1" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-80.0" cy="33.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-80" cy="40" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-73.9" cy="73.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-86.1" cy="73.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-80.0" cy="63.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-80" cy="70" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-43.9" cy="-106.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-56.1" cy="-106.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50.0" cy="-117.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50" cy="-110" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-43.9" cy="-76.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-56.1" cy="-76.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50.0" cy="-87.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50" cy="-80" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-43.9" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-56.1" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50.0" cy="-57.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50" cy="-50" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-43.9" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-56.1" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50.0" cy="-27.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50" cy="-20" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-43.9" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-56.1" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50.0" cy="3.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50" cy="10" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-43.9" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-56.1" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50.0" cy="33.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50" cy="40" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-43.9" cy="73.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-56.1" cy="73.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50.0" cy="63.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50" cy="70" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-43.9" cy="103.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-56.1" cy="103.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50.0" cy="93.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-50" cy="100" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-13.9" cy="-106.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-26.1" cy="-106.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20.0" cy="-117.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20" cy="-110" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-13.9" cy="-76.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-26.1" cy="-76.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20.0" cy="-87.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20" cy="-80" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-13.9" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-26.1" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20.0" cy="-57.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20" cy="-50" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-13.9" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-26.1" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20.0" cy="-27.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20" cy="-20" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-13.9" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-26.1" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20.0" cy="3.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20" cy="10" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-13.9" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-26.1" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20.0" cy="33.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20" cy="40" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-13.9" cy="73.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-26.1" cy="73.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20.0" cy="63.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20" cy="70" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="-13.9" cy="103.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-26.1" cy="103.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20.0" cy="93.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="-20" cy="100" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="16.1" cy="-106.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="3.9" cy="-106.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="10.0" cy="-117.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="10" cy="-110" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="16.1" cy="-76.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="3.9" cy="-76.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="10.0" cy="-87.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="10" cy="-80" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="16.1" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="3.9" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="10.0" cy="-57.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="10" cy="-50" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="16.1" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="3.9" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="10.0" cy="-27.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="10" cy="-20" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="16.1" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="3.9" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="10.0" cy="3.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="10" cy="10" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="16.1" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="3.9" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="10.0" cy="33.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="10" cy="40" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="16.1" cy="73.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="3.9" cy="73.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="10.0" cy="63.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="10" cy="70" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="16.1" cy="103.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="3.9" cy="103.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="10.0" cy="93.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="10" cy="100" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="46.1" cy="-106.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="33.9" cy="-106.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="40.0" cy="-117.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="40" cy="-110" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="46.1" cy="-76.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="33.9" cy="-76.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="40.0" cy="-87.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="40" cy="-80" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="46.1" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="33.9" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="40.0" cy="-57.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="40" cy="-50" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="46.1" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="33.9" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="40.0" cy="-27.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="40" cy="-20" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="46.1" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="33.9" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="40.0" cy="3.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="40" cy="10" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="46.1" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="33.9" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="40.0" cy="33.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="40" cy="40" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="46.1" cy="73.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="33.9" cy="73.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="40.0" cy="63.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="40" cy="70" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="46.1" cy="103.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="33.9" cy="103.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="40.0" cy="93.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="40" cy="100" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="76.1" cy="-76.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="63.9" cy="-76.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="70.0" cy="-87.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="70" cy="-80" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="76.1" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="63.9" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="70.0" cy="-57.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="70" cy="-50" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="76.1" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="63.9" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="70.0" cy="-27.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="70" cy="-20" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="76.1" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="63.9" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="70.0" cy="3.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="70" cy="10" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="76.1" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="63.9" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="70.0" cy="33.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="70" cy="40" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="76.1" cy="73.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="63.9" cy="73.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="70.0" cy="63.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="70" cy="70" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="76.1" cy="103.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="63.9" cy="103.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="70.0" cy="93.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="70" cy="100" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="106.1" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="93.9" cy="-46.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="100.0" cy="-57.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="100" cy="-50" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="106.1" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="93.9" cy="-16.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="100.0" cy="-27.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="100" cy="-20" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="106.1" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="93.9" cy="13.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="100.0" cy="3.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="100" cy="10" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="106.1" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="93.9" cy="43.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="100.0" cy="33.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="100" cy="40" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+<circle cx="106.1" cy="73.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="93.9" cy="73.5" r="2.6" fill="#0D2E4A"/>
+<circle cx="100.0" cy="63.0" r="2.6" fill="#0D2E4A"/>
+<circle cx="100" cy="70" r="11" fill="none" stroke="#0D2E4A" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+</g>
+<ellipse class="tcf-flash" cx="164.0" cy="68.80000000000001" rx="144" ry="46.8" fill="none" stroke="#F2B84B" stroke-width="2.5" style="animation-delay: 1.89s"/>
+</svg>
+</div>
+<div class="tcf-float" style="position: absolute; left: 751px; top: 545px; width: 278px; height: 135px; animation-delay: -0.7s">
+<svg width="278" height="135" viewBox="0 0 278 135" aria-hidden="true" style="display: block; overflow: visible">
+<defs><clipPath id="tcfclip1"><circle r="114"></circle></clipPath></defs>
+
+<ellipse cx="139.0" cy="74.80000000000001" rx="115" ry="36.8" fill="#9FC6E6"/><rect x="24.0" y="60.800000000000004" width="230" height="14" fill="#9FC6E6"/><ellipse cx="139.0" cy="60.800000000000004" rx="115" ry="36.8" fill="#E8F4FD"/>
+<g transform="translate(139.0,60.800000000000004) scale(1,0.32)" clip-path="url(#tcfclip1)">
+<circle cx="-107.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="-92.5" cy="-40" r="2.2" fill="#0D2E4A"/>
+<circle cx="-100" cy="-25" r="2.2" fill="#0D2E4A"/>
+<circle cx="-92.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="-100" cy="5" r="2.2" fill="#0D2E4A"/>
+<circle cx="-92.5" cy="20" r="2.2" fill="#0D2E4A"/>
+<circle cx="-100" cy="35" r="2.2" fill="#0D2E4A"/>
+<circle cx="-92.5" cy="50" r="2.2" fill="#0D2E4A"/>
+<circle cx="-77.5" cy="-70" r="2.2" fill="#0D2E4A"/>
+<circle cx="-85" cy="-55" r="2.2" fill="#0D2E4A"/>
+<circle cx="-77.5" cy="-40" r="2.2" fill="#0D2E4A"/>
+<circle cx="-85" cy="-25" r="2.2" fill="#0D2E4A"/>
+<circle cx="-77.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="-85" cy="5" r="2.2" fill="#0D2E4A"/>
+<circle cx="-77.5" cy="20" r="2.2" fill="#0D2E4A"/>
+<circle cx="-85" cy="35" r="2.2" fill="#0D2E4A"/>
+<circle cx="-77.5" cy="50" r="2.2" fill="#0D2E4A"/>
+<circle cx="-85" cy="65" r="2.2" fill="#0D2E4A"/>
+<circle cx="-62.5" cy="-70" r="2.2" fill="#0D2E4A"/>
+<circle cx="-70" cy="-55" r="2.2" fill="#0D2E4A"/>
+<circle cx="-62.5" cy="-40" r="2.2" fill="#0D2E4A"/>
+<circle cx="-70" cy="-25" r="2.2" fill="#0D2E4A"/>
+<circle cx="-62.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="-70" cy="5" r="2.2" fill="#0D2E4A"/>
+<circle cx="-62.5" cy="20" r="2.2" fill="#0D2E4A"/>
+<circle cx="-70" cy="35" r="2.2" fill="#0D2E4A"/>
+<circle cx="-62.5" cy="50" r="2.2" fill="#0D2E4A"/>
+<circle cx="-70" cy="65" r="2.2" fill="#0D2E4A"/>
+<circle cx="-62.5" cy="80" r="2.2" fill="#0D2E4A"/>
+<circle cx="-55" cy="-85" r="2.2" fill="#0D2E4A"/>
+<circle cx="-47.5" cy="-70" r="2.2" fill="#0D2E4A"/>
+<circle cx="-55" cy="-55" r="2.2" fill="#0D2E4A"/>
+<circle cx="-47.5" cy="-40" r="2.2" fill="#0D2E4A"/>
+<circle cx="-55" cy="-25" r="2.2" fill="#0D2E4A"/>
+<circle cx="-47.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="-55" cy="5" r="2.2" fill="#0D2E4A"/>
+<circle cx="-47.5" cy="20" r="2.2" fill="#0D2E4A"/>
+<circle cx="-55" cy="35" r="2.2" fill="#0D2E4A"/>
+<circle cx="-47.5" cy="50" r="2.2" fill="#0D2E4A"/>
+<circle cx="-55" cy="65" r="2.2" fill="#0D2E4A"/>
+<circle cx="-47.5" cy="80" r="2.2" fill="#0D2E4A"/>
+<circle cx="-32.5" cy="-100" r="2.2" fill="#0D2E4A"/>
+<circle cx="-40" cy="-85" r="2.2" fill="#0D2E4A"/>
+<circle cx="-32.5" cy="-70" r="2.2" fill="#0D2E4A"/>
+<circle cx="-40" cy="-55" r="2.2" fill="#0D2E4A"/>
+<circle cx="-32.5" cy="-40" r="2.2" fill="#0D2E4A"/>
+<circle cx="-40" cy="-25" r="2.2" fill="#0D2E4A"/>
+<circle cx="-32.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="-40" cy="5" r="2.2" fill="#0D2E4A"/>
+<circle cx="-32.5" cy="20" r="2.2" fill="#0D2E4A"/>
+<circle cx="-40" cy="35" r="2.2" fill="#0D2E4A"/>
+<circle cx="-32.5" cy="50" r="2.2" fill="#0D2E4A"/>
+<circle cx="-40" cy="65" r="2.2" fill="#0D2E4A"/>
+<circle cx="-32.5" cy="80" r="2.2" fill="#0D2E4A"/>
+<circle cx="-40" cy="95" r="2.2" fill="#0D2E4A"/>
+<circle cx="-17.5" cy="-100" r="2.2" fill="#0D2E4A"/>
+<circle cx="-25" cy="-85" r="2.2" fill="#0D2E4A"/>
+<circle cx="-17.5" cy="-70" r="2.2" fill="#0D2E4A"/>
+<circle cx="-25" cy="-55" r="2.2" fill="#0D2E4A"/>
+<circle cx="-17.5" cy="-40" r="2.2" fill="#0D2E4A"/>
+<circle cx="-25" cy="-25" r="2.2" fill="#0D2E4A"/>
+<circle cx="-17.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="-25" cy="5" r="2.2" fill="#0D2E4A"/>
+<circle cx="-17.5" cy="20" r="2.2" fill="#0D2E4A"/>
+<circle cx="-25" cy="35" r="2.2" fill="#0D2E4A"/>
+<circle cx="-17.5" cy="50" r="2.2" fill="#0D2E4A"/>
+<circle cx="-25" cy="65" r="2.2" fill="#0D2E4A"/>
+<circle cx="-17.5" cy="80" r="2.2" fill="#0D2E4A"/>
+<circle cx="-25" cy="95" r="2.2" fill="#0D2E4A"/>
+<circle cx="-2.5" cy="-100" r="2.2" fill="#0D2E4A"/>
+<circle cx="-10" cy="-85" r="2.2" fill="#0D2E4A"/>
+<circle cx="-2.5" cy="-70" r="2.2" fill="#0D2E4A"/>
+<circle cx="-10" cy="-55" r="2.2" fill="#0D2E4A"/>
+<circle cx="-2.5" cy="-40" r="2.2" fill="#0D2E4A"/>
+<circle cx="-10" cy="-25" r="2.2" fill="#0D2E4A"/>
+<circle cx="-2.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="-10" cy="5" r="2.2" fill="#0D2E4A"/>
+<circle cx="-2.5" cy="20" r="2.2" fill="#0D2E4A"/>
+<circle cx="-10" cy="35" r="2.2" fill="#0D2E4A"/>
+<circle cx="-2.5" cy="50" r="2.2" fill="#0D2E4A"/>
+<circle cx="-10" cy="65" r="2.2" fill="#0D2E4A"/>
+<circle cx="-2.5" cy="80" r="2.2" fill="#0D2E4A"/>
+<circle cx="-10" cy="95" r="2.2" fill="#0D2E4A"/>
+<circle cx="12.5" cy="-100" r="2.2" fill="#0D2E4A"/>
+<circle cx="5" cy="-85" r="2.2" fill="#0D2E4A"/>
+<circle cx="12.5" cy="-70" r="2.2" fill="#0D2E4A"/>
+<circle cx="5" cy="-55" r="2.2" fill="#0D2E4A"/>
+<circle cx="12.5" cy="-40" r="2.2" fill="#0D2E4A"/>
+<circle cx="5" cy="-25" r="2.2" fill="#0D2E4A"/>
+<circle cx="12.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="5" cy="5" r="2.2" fill="#0D2E4A"/>
+<circle cx="12.5" cy="20" r="2.2" fill="#0D2E4A"/>
+<circle cx="5" cy="35" r="2.2" fill="#0D2E4A"/>
+<circle cx="12.5" cy="50" r="2.2" fill="#0D2E4A"/>
+<circle cx="5" cy="65" r="2.2" fill="#0D2E4A"/>
+<circle cx="12.5" cy="80" r="2.2" fill="#0D2E4A"/>
+<circle cx="5" cy="95" r="2.2" fill="#0D2E4A"/>
+<circle cx="27.5" cy="-100" r="2.2" fill="#0D2E4A"/>
+<circle cx="20" cy="-85" r="2.2" fill="#0D2E4A"/>
+<circle cx="27.5" cy="-70" r="2.2" fill="#0D2E4A"/>
+<circle cx="20" cy="-55" r="2.2" fill="#0D2E4A"/>
+<circle cx="27.5" cy="-40" r="2.2" fill="#0D2E4A"/>
+<circle cx="20" cy="-25" r="2.2" fill="#0D2E4A"/>
+<circle cx="27.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="20" cy="5" r="2.2" fill="#0D2E4A"/>
+<circle cx="27.5" cy="20" r="2.2" fill="#0D2E4A"/>
+<circle cx="20" cy="35" r="2.2" fill="#0D2E4A"/>
+<circle cx="27.5" cy="50" r="2.2" fill="#0D2E4A"/>
+<circle cx="20" cy="65" r="2.2" fill="#0D2E4A"/>
+<circle cx="27.5" cy="80" r="2.2" fill="#0D2E4A"/>
+<circle cx="20" cy="95" r="2.2" fill="#0D2E4A"/>
+<circle cx="42.5" cy="-100" r="2.2" fill="#0D2E4A"/>
+<circle cx="35" cy="-85" r="2.2" fill="#0D2E4A"/>
+<circle cx="42.5" cy="-70" r="2.2" fill="#0D2E4A"/>
+<circle cx="35" cy="-55" r="2.2" fill="#0D2E4A"/>
+<circle cx="42.5" cy="-40" r="2.2" fill="#0D2E4A"/>
+<circle cx="35" cy="-25" r="2.2" fill="#0D2E4A"/>
+<circle cx="42.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="35" cy="5" r="2.2" fill="#0D2E4A"/>
+<circle cx="42.5" cy="20" r="2.2" fill="#0D2E4A"/>
+<circle cx="35" cy="35" r="2.2" fill="#0D2E4A"/>
+<circle cx="42.5" cy="50" r="2.2" fill="#0D2E4A"/>
+<circle cx="35" cy="65" r="2.2" fill="#0D2E4A"/>
+<circle cx="42.5" cy="80" r="2.2" fill="#0D2E4A"/>
+<circle cx="35" cy="95" r="2.2" fill="#0D2E4A"/>
+<circle cx="50" cy="-85" r="2.2" fill="#0D2E4A"/>
+<circle cx="57.5" cy="-70" r="2.2" fill="#0D2E4A"/>
+<circle cx="50" cy="-55" r="2.2" fill="#0D2E4A"/>
+<circle cx="57.5" cy="-40" r="2.2" fill="#0D2E4A"/>
+<circle cx="50" cy="-25" r="2.2" fill="#0D2E4A"/>
+<circle cx="57.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="50" cy="5" r="2.2" fill="#0D2E4A"/>
+<circle cx="57.5" cy="20" r="2.2" fill="#0D2E4A"/>
+<circle cx="50" cy="35" r="2.2" fill="#0D2E4A"/>
+<circle cx="57.5" cy="50" r="2.2" fill="#0D2E4A"/>
+<circle cx="50" cy="65" r="2.2" fill="#0D2E4A"/>
+<circle cx="57.5" cy="80" r="2.2" fill="#0D2E4A"/>
+<circle cx="50" cy="95" r="2.2" fill="#0D2E4A"/>
+<circle cx="65" cy="-85" r="2.2" fill="#0D2E4A"/>
+<circle cx="72.5" cy="-70" r="2.2" fill="#0D2E4A"/>
+<circle cx="65" cy="-55" r="2.2" fill="#0D2E4A"/>
+<circle cx="72.5" cy="-40" r="2.2" fill="#0D2E4A"/>
+<circle cx="65" cy="-25" r="2.2" fill="#0D2E4A"/>
+<circle cx="72.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="65" cy="5" r="2.2" fill="#0D2E4A"/>
+<circle cx="72.5" cy="20" r="2.2" fill="#0D2E4A"/>
+<circle cx="65" cy="35" r="2.2" fill="#0D2E4A"/>
+<circle cx="72.5" cy="50" r="2.2" fill="#0D2E4A"/>
+<circle cx="65" cy="65" r="2.2" fill="#0D2E4A"/>
+<circle cx="72.5" cy="80" r="2.2" fill="#0D2E4A"/>
+<circle cx="80" cy="-55" r="2.2" fill="#0D2E4A"/>
+<circle cx="87.5" cy="-40" r="2.2" fill="#0D2E4A"/>
+<circle cx="80" cy="-25" r="2.2" fill="#0D2E4A"/>
+<circle cx="87.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="80" cy="5" r="2.2" fill="#0D2E4A"/>
+<circle cx="87.5" cy="20" r="2.2" fill="#0D2E4A"/>
+<circle cx="80" cy="35" r="2.2" fill="#0D2E4A"/>
+<circle cx="87.5" cy="50" r="2.2" fill="#0D2E4A"/>
+<circle cx="80" cy="65" r="2.2" fill="#0D2E4A"/>
+<circle cx="95" cy="-25" r="2.2" fill="#0D2E4A"/>
+<circle cx="102.5" cy="-10" r="2.2" fill="#0D2E4A"/>
+<circle cx="95" cy="5" r="2.2" fill="#0D2E4A"/>
+<circle cx="102.5" cy="20" r="2.2" fill="#0D2E4A"/>
+<circle cx="95" cy="35" r="2.2" fill="#0D2E4A"/>
+</g>
+<ellipse class="tcf-flash" cx="139.0" cy="60.800000000000004" rx="119" ry="38.8" fill="none" stroke="#F2B84B" stroke-width="2.5" style="animation-delay: 1.05s"/>
+</svg>
+</div>
+<div class="tcf-float" style="position: absolute; left: 764px; top: 413px; width: 252px; height: 127px; animation-delay: 0.0s">
+<svg width="252" height="127" viewBox="0 0 252 127" aria-hidden="true" style="display: block; overflow: visible">
+<defs><clipPath id="tcfclip0"><circle r="101"></circle></clipPath></defs>
+
+<ellipse cx="126.0" cy="56.64" rx="102" ry="32.6" fill="#F2B84B" fill-opacity="0.06" stroke="#F2B84B" stroke-width="1.4" stroke-dasharray="4 5"/>
+<g transform="translate(126.0,56.64) scale(1,0.32)" clip-path="url(#tcfclip0)">
+<path d="M-89 -38h6M-86 -41v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-89 -22h6M-86 -25v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-89 -6h6M-86 -9v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-89 10h6M-86 7v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-89 26h6M-86 23v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-89 42h6M-86 39v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-73 -54h6M-70 -57v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-73 -38h6M-70 -41v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-73 -22h6M-70 -25v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-73 -6h6M-70 -9v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-73 10h6M-70 7v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-73 26h6M-70 23v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-73 42h6M-70 39v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-73 58h6M-70 55v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-57 -70h6M-54 -73v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-57 -54h6M-54 -57v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-57 -38h6M-54 -41v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-57 -22h6M-54 -25v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-57 -6h6M-54 -9v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-57 10h6M-54 7v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-57 26h6M-54 23v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-57 42h6M-54 39v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-57 58h6M-54 55v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-57 74h6M-54 71v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-41 -86h6M-38 -89v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-41 -70h6M-38 -73v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-41 -54h6M-38 -57v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-41 -38h6M-38 -41v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-41 -22h6M-38 -25v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-41 -6h6M-38 -9v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-41 10h6M-38 7v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-41 26h6M-38 23v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-41 42h6M-38 39v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-41 58h6M-38 55v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-41 74h6M-38 71v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-25 -86h6M-22 -89v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-25 -70h6M-22 -73v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-25 -54h6M-22 -57v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-25 -38h6M-22 -41v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-25 -22h6M-22 -25v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-25 -6h6M-22 -9v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-25 10h6M-22 7v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-25 26h6M-22 23v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-25 42h6M-22 39v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-25 58h6M-22 55v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-25 74h6M-22 71v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-25 90h6M-22 87v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-9 -86h6M-6 -89v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-9 -70h6M-6 -73v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-9 -54h6M-6 -57v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-9 -38h6M-6 -41v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-9 -22h6M-6 -25v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-9 -6h6M-6 -9v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-9 10h6M-6 7v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-9 26h6M-6 23v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-9 42h6M-6 39v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-9 58h6M-6 55v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-9 74h6M-6 71v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M-9 90h6M-6 87v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M7 -86h6M10 -89v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M7 -70h6M10 -73v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M7 -54h6M10 -57v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M7 -38h6M10 -41v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M7 -22h6M10 -25v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M7 -6h6M10 -9v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M7 10h6M10 7v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M7 26h6M10 23v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M7 42h6M10 39v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M7 58h6M10 55v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M7 74h6M10 71v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M7 90h6M10 87v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M23 -86h6M26 -89v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M23 -70h6M26 -73v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M23 -54h6M26 -57v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M23 -38h6M26 -41v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M23 -22h6M26 -25v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M23 -6h6M26 -9v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M23 10h6M26 7v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M23 26h6M26 23v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M23 42h6M26 39v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M23 58h6M26 55v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M23 74h6M26 71v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M23 90h6M26 87v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M39 -86h6M42 -89v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M39 -70h6M42 -73v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M39 -54h6M42 -57v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M39 -38h6M42 -41v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M39 -22h6M42 -25v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M39 -6h6M42 -9v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M39 10h6M42 7v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M39 26h6M42 23v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M39 42h6M42 39v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M39 58h6M42 55v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M39 74h6M42 71v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M55 -70h6M58 -73v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M55 -54h6M58 -57v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M55 -38h6M58 -41v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M55 -22h6M58 -25v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M55 -6h6M58 -9v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M55 10h6M58 7v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M55 26h6M58 23v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M55 42h6M58 39v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M55 58h6M58 55v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M55 74h6M58 71v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M71 -54h6M74 -57v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M71 -38h6M74 -41v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M71 -22h6M74 -25v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M71 -6h6M74 -9v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M71 10h6M74 7v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M71 26h6M74 23v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M71 42h6M74 39v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M71 58h6M74 55v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M87 -22h6M90 -25v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M87 -6h6M90 -9v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M87 10h6M90 7v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+<path d="M87 26h6M90 23v6" stroke="#F2B84B" stroke-width="1" opacity="0.7" vector-effect="non-scaling-stroke"/>
+</g>
+<ellipse class="tcf-flash" cx="126.0" cy="56.64" rx="106" ry="34.6" fill="none" stroke="#F2B84B" stroke-width="2.5" style="animation-delay: 0.3s"/>
+</svg>
+</div>
+<div style="position: absolute; left: 80px; top: 432px; width: 400px; display: flex; gap: 18px; align-items: flex-start">
+<div style="width: 14px; height: 14px; border-radius: 50%; margin-top: 16px; flex-shrink: 0; border: 1.5px dashed #F2B84B"></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; align-items: baseline; gap: 12px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.12em; color: #F2B84B">T0</span>
+<span style="font-family: 'Libre Baskerville', Georgia, serif; font-size: 30px; color: #EAF2FA">Quarks</span>
+</div>
+<div style="font-family: Inter, system-ui, sans-serif; font-size: 15px; line-height: 1.45; color: #B4C6D8">The conditions under which content is valid.</div>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; color: #8FA6BD">ATOMIC DESIGN ≈ Tokens</div>
+
+</div>
+</div>
+<div style="position: absolute; left: 500px; top: 470px; width: 276px; height: 0; border-top: 1px dotted #3A5673"></div>
+<div style="position: absolute; left: 80px; top: 568px; width: 400px; display: flex; gap: 18px; align-items: flex-start">
+<div style="width: 14px; height: 14px; border-radius: 50%; margin-top: 16px; flex-shrink: 0; background: #E8F4FD; border: 1px solid #3F8DC4"></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; align-items: baseline; gap: 12px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.12em; color: #F2B84B">T1</span>
+<span style="font-family: 'Libre Baskerville', Georgia, serif; font-size: 30px; color: #EAF2FA">Particles</span>
+</div>
+<div style="font-family: Inter, system-ui, sans-serif; font-size: 15px; line-height: 1.45; color: #B4C6D8">A single fact with a job.</div>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; color: #8FA6BD">ATOMIC DESIGN ≈ Atoms</div>
+
+</div>
+</div>
+<div style="position: absolute; left: 500px; top: 606px; width: 263px; height: 0; border-top: 1px dotted #3A5673"></div>
+<div style="position: absolute; left: 80px; top: 718px; width: 400px; display: flex; gap: 18px; align-items: flex-start">
+<div style="width: 14px; height: 14px; border-radius: 50%; margin-top: 16px; flex-shrink: 0; background: #B9DDF5; border: 1px solid #3F8DC4"></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; align-items: baseline; gap: 12px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.12em; color: #F2B84B">T2</span>
+<span style="font-family: 'Libre Baskerville', Georgia, serif; font-size: 30px; color: #EAF2FA">Clusters</span>
+</div>
+<div style="font-family: Inter, system-ui, sans-serif; font-size: 15px; line-height: 1.45; color: #B4C6D8">Facts assembled into a meaningful semantic object.</div>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; color: #8FA6BD">ATOMIC DESIGN ≈ Molecules</div>
+
+</div>
+</div>
+<div style="position: absolute; left: 500px; top: 756px; width: 238px; height: 0; border-top: 1px dotted #3A5673"></div>
+<div style="position: absolute; left: 80px; top: 873px; width: 400px; display: flex; gap: 18px; align-items: flex-start">
+<div style="width: 14px; height: 14px; border-radius: 50%; margin-top: 16px; flex-shrink: 0; background: #7DB9E3; border: 1px solid #3F8DC4"></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; align-items: baseline; gap: 12px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.12em; color: #F2B84B">T3</span>
+<span style="font-family: 'Libre Baskerville', Georgia, serif; font-size: 30px; color: #EAF2FA">Zones</span>
+</div>
+<div style="font-family: Inter, system-ui, sans-serif; font-size: 15px; line-height: 1.45; color: #B4C6D8">A context container, governed by user intent.</div>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; color: #8FA6BD">ATOMIC DESIGN ≈ Organisms</div>
+
+</div>
+</div>
+<div style="position: absolute; left: 500px; top: 911px; width: 203px; height: 0; border-top: 1px dotted #3A5673"></div>
+<div style="position: absolute; left: 80px; top: 1050px; width: 400px; display: flex; gap: 18px; align-items: flex-start">
+<div style="width: 14px; height: 14px; border-radius: 50%; margin-top: 16px; flex-shrink: 0; background: #3F8DC4; border: 1px solid #3F8DC4"></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; align-items: baseline; gap: 12px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.12em; color: #F2B84B">T4</span>
+<span style="font-family: 'Libre Baskerville', Georgia, serif; font-size: 30px; color: #EAF2FA">Structures</span>
+</div>
+<div style="font-family: Inter, system-ui, sans-serif; font-size: 15px; line-height: 1.45; color: #B4C6D8">The endpoint composition a user encounters.</div>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; color: #8FA6BD">ATOMIC DESIGN ≈ Templates / Pages</div>
+<div style="margin-top: 6px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: #F2B84B">+ EMERGENT ACCESSIBILITY CHECKS</div>
+</div>
+</div>
+<div style="position: absolute; left: 500px; top: 1088px; width: 168px; height: 0; border-top: 1px dotted #3A5673"></div>
+<div style="position: absolute; left: 80px; top: 1251px; width: 400px; display: flex; gap: 18px; align-items: flex-start">
+<div style="width: 14px; height: 14px; border-radius: 50%; margin-top: 16px; flex-shrink: 0; background: #1D5E8C; border: 1px solid #3F8DC4"></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; align-items: baseline; gap: 12px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.12em; color: #F2B84B">T5</span>
+<span style="font-family: 'Libre Baskerville', Georgia, serif; font-size: 30px; color: #EAF2FA">Ecosystems</span>
+</div>
+<div style="font-family: Inter, system-ui, sans-serif; font-size: 15px; line-height: 1.45; color: #B4C6D8">Structures unified by domain, journey, or brand.</div>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; color: #8FA6BD">ATOMIC DESIGN ≈ Pattern library</div>
+
+</div>
+</div>
+<div style="position: absolute; left: 500px; top: 1289px; width: 128px; height: 0; border-top: 1px dotted #3A5673"></div>
+<div style="position: absolute; left: 80px; top: 1478px; width: 400px; display: flex; gap: 18px; align-items: flex-start">
+<div style="width: 14px; height: 14px; border-radius: 50%; margin-top: 16px; flex-shrink: 0; background: #0D2E4A; border: 1px solid #3F8DC4"></div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; align-items: baseline; gap: 12px">
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.12em; color: #F2B84B">T6</span>
+<span style="font-family: 'Libre Baskerville', Georgia, serif; font-size: 30px; color: #EAF2FA">Biomes</span>
+</div>
+<div style="font-family: Inter, system-ui, sans-serif; font-size: 15px; line-height: 1.45; color: #B4C6D8">An organization's complete content presence.</div>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; color: #8FA6BD">ATOMIC DESIGN ≈ Beyond Atomic Design</div>
+
+</div>
+</div>
+<div style="position: absolute; left: 500px; top: 1516px; width: 88px; height: 0; border-top: 1px dotted #3A5673"></div>
+<div style="position: absolute; left: 80px; top: 1750px; width: 380px; padding-top: 32px; border-top: 1px solid #2B4764; display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.16em; color: #F2B84B">EPISTEMIC STATUS</div>
+<div style="font-family: 'Libre Baskerville', Georgia, serif; font-size: 24px; color: #EAF2FA">The weakest-status rule</div>
+<p style="margin: 0; font-family: Inter, system-ui, sans-serif; font-size: 14px; line-height: 1.65; color: #B4C6D8">A Cluster is only as verified as its least-verified Particle. Status inherits upward, and an expired window falls back to unverified.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; row-gap: 12px; column-gap: 8px; margin-top: 8px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.08em; padding: 5px 8px; border: 1px solid #7DB9E3; border-radius: 999px; color: #EAF2FA; opacity: 0.35">UNVERIFIED</span><span style="color: #5F7B97; font-size: 11px">→</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.08em; padding: 5px 8px; border: 1px solid #7DB9E3; border-radius: 999px; color: #EAF2FA; opacity: 0.55">INFERRED</span><span style="color: #5F7B97; font-size: 11px">→</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.08em; padding: 5px 8px; border: 1px solid #7DB9E3; border-radius: 999px; color: #EAF2FA; opacity: 0.75">TIME-SENSITIVE</span><span style="color: #5F7B97; font-size: 11px">→</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.08em; padding: 5px 8px; border: 1px solid #7DB9E3; border-radius: 999px; color: #EAF2FA; opacity: 1">CONFIRMED</span></div>
+</div><div style="position: absolute; left: 530px; top: 1750px; width: 380px; padding-top: 32px; border-top: 1px solid #2B4764; display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.16em; color: #F2B84B">ACCESSIBILITY</div>
+<div style="font-family: 'Libre Baskerville', Georgia, serif; font-size: 24px; color: #EAF2FA">Floor plus emergent</div>
+<p style="margin: 0; font-family: Inter, system-ui, sans-serif; font-size: 14px; line-height: 1.65; color: #B4C6D8">A Structure conforms only if every child conforms and the checks that exist only at assembly pass: heading outline, focus order, reflow.</p>
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: #8FA6BD; margin-top: 8px">PARTICLE PASS ≠ STRUCTURE PASS</div>
+</div><div style="position: absolute; left: 980px; top: 1750px; width: 380px; padding-top: 32px; border-top: 1px solid #2B4764; display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.16em; color: #F2B84B">SEAM STACK LOCATOR</div>
+<div style="font-family: 'Libre Baskerville', Georgia, serif; font-size: 24px; color: #EAF2FA">The Governance layer</div>
+<p style="margin: 0; font-family: Inter, system-ui, sans-serif; font-size: 14px; line-height: 1.65; color: #B4C6D8">The TCF governs meaning. Storage, transition discipline, and evidentiary durability are peer layers it composes with.</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 8px"><div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; padding: 7px 10px; border: 1px solid #2B4764; color: #B4C6D8; background: transparent">SUBSTRATE</div><div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; padding: 7px 10px; border: 1px solid #F2B84B; color: #F2B84B; background: rgba(242,184,75,0.08)">GOVERNANCE · TCF</div><div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; padding: 7px 10px; border: 1px solid #2B4764; color: #B4C6D8; background: transparent">BOUNDARY</div><div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; padding: 7px 10px; border: 1px solid #2B4764; color: #B4C6D8; background: transparent">EVIDENCE</div></div>
+</div>
+<div style="position: absolute; left: 80px; top: 2082px; width: 1280px; display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.14em; color: #8FA6BD">
+<span>JEDI WRIGHT · SYSTEMS OF THOUGHT · UX MINDS, LLC</span>
+<span>A PULSE CHANGED AT T0 REACHES T6</span>
+<a href="https://www.jediwright.com/content-strategy-framework" target="_blank" rel="noopener noreferrer" style="color: #F2B84B; text-decoration: none">JEDIWRIGHT.COM/CONTENT-STRATEGY-FRAMEWORK</a>
+</div>
+</div>
+</main>
+<script>
+(function(){var s=document.getElementById('tcf-stage');function fit(){var k=Math.min(1,window.innerWidth/1440);s.style.transform='scale('+k+')';document.body.style.height=(2156*k)+'px';}window.addEventListener('resize',fit);fit();})();
+</script>
+</body>
+</html>

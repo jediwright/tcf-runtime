@@ -4,6 +4,11 @@ Executable runtime for the [Tiered Content Framework](https://www.jediwright.com
 
 ## What this is
 
+[![The Tiered Content Framework one-sheet: seven governance tiers, three cross-cutting dimensions, one propagation logic](docs/one-sheet/preview.jpg)](https://jediwright.github.io/tcf-runtime/one-sheet/)
+
+*The Tiered Content Framework as published (v1.7.5). Click for the animated version. This runtime currently enforces the Quark store, epistemic status gate and weakest-status propagation; other constructs shown are framework scope, not runtime scope.*
+
+
 The TCF defines how content is structured, labeled, and governed across seven tiers, with epistemic status (confirmed / inferred / unverified / time-sensitive) declared at the Particle level and inherited upward by the weakest member. That is a set of rules. This repository is the machinery that enforces them:
 
 - **Quark store** — the versioned, content-addressed collection of constraints the framework calls "governed at the Quark level"
